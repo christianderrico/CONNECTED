@@ -1,0 +1,588 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://www.AHDB/connected#"
+     xml:base="https://www.AHDB/connected"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="https://www.AHDB/connected#">
+        <owl:versionIRI rdf:resource="https://www.AHDB/connected#"/>
+        <owl:imports rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://www.AHDB/connected#expects -->
+
+    <owl:ObjectProperty rdf:about="https://www.AHDB/connected#expects">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="https://www.AHDB/connected#Interface"/>
+        <rdfs:range rdf:resource="https://www.AHDB/connected#Input"/>
+        <dc:creator>AlmaHealthDB</dc:creator>
+        <dc:description>This property links a model interface to Inputs that must be provided when calling the interface. It defines the expected parameters required for execution.</dc:description>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1746144000</terms:created>
+        <rdfs:comment>Connects a model interface to a parameter description</rdfs:comment>
+        <rdfs:label>expects</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.AHDB/connected#hasIdentifier -->
+
+    <owl:ObjectProperty rdf:about="https://www.AHDB/connected#hasIdentifier">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="https://www.AHDB/connected#Model"/>
+        <rdfs:range rdf:resource="https://www.AHDB/connected#Identifier"/>
+        <dc:creator>AlmaHealthDB</dc:creator>
+        <dc:description>This property links a model to its unique identifier</dc:description>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1746144000</terms:created>
+        <rdfs:comment>links a Model to its unique idenitifier</rdfs:comment>
+        <rdfs:label>hasIdentifier</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.AHDB/connected#hasInterface -->
+
+    <owl:ObjectProperty rdf:about="https://www.AHDB/connected#hasInterface">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="https://www.AHDB/connected#Model"/>
+        <rdfs:range rdf:resource="https://www.AHDB/connected#Interface"/>
+        <dc:creator>AlmaHealthDB</dc:creator>
+        <dc:description>This property links a model to its specific exposing interface</dc:description>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1746144000</terms:created>
+        <rdfs:comment>links a Model to its exposing Inteface</rdfs:comment>
+        <rdfs:label>hasInterface</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.AHDB/connected#hasMaintainer -->
+
+    <owl:ObjectProperty rdf:about="https://www.AHDB/connected#hasMaintainer">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="https://www.AHDB/connected#Model"/>
+        <rdfs:range rdf:resource="https://www.AHDB/connected#Mantainer"/>
+        <dc:creator>AlmaHealthDB</dc:creator>
+        <dc:description>This property links a model to its maintaner</dc:description>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1746144000</terms:created>
+        <rdfs:comment>links a Model to its maintainer</rdfs:comment>
+        <rdfs:label>hasMaintainer</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.AHDB/connected#implementation -->
+
+    <owl:ObjectProperty rdf:about="https://www.AHDB/connected#implementation">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="https://www.AHDB/connected#Mapping"/>
+        <rdfs:range rdf:resource="https://www.AHDB/connected#Implementation"/>
+        <dc:creator>AlmaHealthDB</dc:creator>
+        <dc:description>This property links an implementation to a mapping, which serves as the binding point between the formal interface definition and its concrete realization.</dc:description>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1746144000</terms:created>
+        <rdfs:comment>specifies a concrete implementation within a mapping</rdfs:comment>
+        <rdfs:label>implementation</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.AHDB/connected#inputMapping -->
+
+    <owl:ObjectProperty rdf:about="https://www.AHDB/connected#inputMapping">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="https://www.AHDB/connected#Mapping"/>
+        <rdfs:range rdf:resource="https://www.AHDB/connected#InputMapping"/>
+        <dc:creator>AlmaHealthDB</dc:creator>
+        <dc:description>This property connects an abstract input to a mapping, which serves as the binding point between its formal interface definition and its concrete realization.</dc:description>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1746144000</terms:created>
+        <rdfs:comment>links a concrete input description to a mapping</rdfs:comment>
+        <rdfs:label>inputMapping</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.AHDB/connected#interface -->
+
+    <owl:ObjectProperty rdf:about="https://www.AHDB/connected#interface">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="https://www.AHDB/connected#Mapping"/>
+        <rdfs:range rdf:resource="https://www.AHDB/connected#Interface"/>
+        <dc:creator>AlmaHealthDB</dc:creator>
+        <dc:description>This property links a model interface to a mapping, which serves as the binding point between its formal definition and its concrete realization.</dc:description>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1746144000</terms:created>
+        <rdfs:comment>links a concrete mapping to a model interface</rdfs:comment>
+        <rdfs:label>interface</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.AHDB/connected#outputMapping -->
+
+    <owl:ObjectProperty rdf:about="https://www.AHDB/connected#outputMapping">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="https://www.AHDB/connected#Mapping"/>
+        <rdfs:range rdf:resource="https://www.AHDB/connected#OutputMapping"/>
+        <dc:creator>AlmaHealthDB</dc:creator>
+        <dc:description>This property connects an abstract output to a mapping, which serves as the binding point between its formal interface definition and its concrete realization.</dc:description>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1746144000</terms:created>
+        <rdfs:comment>links a mapping  to an outputMapping</rdfs:comment>
+        <rdfs:label>outputMapping</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.AHDB/connected#returns -->
+
+    <owl:ObjectProperty rdf:about="https://www.AHDB/connected#returns">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="https://www.AHDB/connected#Interface"/>
+        <rdfs:range rdf:resource="https://www.AHDB/connected#Output"/>
+        <dc:creator>AlmaHealthDB</dc:creator>
+        <dc:description>This property links a model interface to Outputs that must be provided when calling the interface. It defines the expected parameters required for execution.</dc:description>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1746144000</terms:created>
+        <rdfs:label>returns</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://www.AHDB/connected#contentType -->
+
+    <owl:DatatypeProperty rdf:about="https://www.AHDB/connected#contentType">
+        <rdfs:domain rdf:resource="https://www.AHDB/connected#WebAPI"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <dc:creator>AlmaHealthDB</dc:creator>
+        <dc:description>This property indicates the expected content type (e.g., &apos;application/json&apos;, &apos;text/csv&apos;) for data sent to a WebAPI. It allows clients to understand how to format their requests properly.</dc:description>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1746144000</terms:created>
+        <rdfs:comment>defines the Content-type of the resources expected by the WebAPI</rdfs:comment>
+        <rdfs:label>contentType</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.AHDB/connected#entrypoint -->
+
+    <owl:DatatypeProperty rdf:about="https://www.AHDB/connected#entrypoint">
+        <rdfs:domain rdf:resource="https://www.AHDB/connected#WebAPI"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <dc:creator>AlmaHealthDB</dc:creator>
+        <dc:description>This property defines the actual endpoint (typically an HTTP or HTTPS URI) through which the WebAPI can be invoked by clients.</dc:description>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1746144000</terms:created>
+        <rdfs:comment>defines the entrypoint to contact the WebAPI</rdfs:comment>
+        <rdfs:label>entrypoint</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.AHDB/connected#method -->
+
+    <owl:DatatypeProperty rdf:about="https://www.AHDB/connected#method">
+        <rdfs:domain rdf:resource="https://www.AHDB/connected#WebAPI"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <dc:creator>AlmaHealthDB</dc:creator>
+        <dc:description>This property indicates which HTTP method (e.g., &apos;GET&apos;, &apos;POST&apos;) must be used when invoking the WebAPI endpoint.</dc:description>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1746144000</terms:created>
+        <rdfs:comment>defines the method exposed by the WebAPI</rdfs:comment>
+        <rdfs:label>method</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.AHDB/connected#position -->
+
+    <owl:DatatypeProperty rdf:about="https://www.AHDB/connected#position">
+        <rdfs:domain rdf:resource="https://www.AHDB/connected#PositionInputMapping"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <dc:creator>AlmaHealthDB</dc:creator>
+        <dc:description>This property specifies the position of an input parameter passed to the concrete implementation of an interface.</dc:description>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1746144000</terms:created>
+        <rdfs:comment>defines the position of the input</rdfs:comment>
+        <rdfs:label>position</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.AHDB/connected#property -->
+
+    <owl:DatatypeProperty rdf:about="https://www.AHDB/connected#property">
+        <rdfs:domain rdf:resource="https://www.AHDB/connected#PropertyInputMapping"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <dc:creator>AlmaHealthDB</dc:creator>
+        <dc:description>This property specifies the name of the input parameter as it is passed to the concrete implementation of an interface.</dc:description>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1746144000</terms:created>
+        <rdfs:comment>defines the mapped property name</rdfs:comment>
+        <rdfs:label>property</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.AHDB/connected#required -->
+
+    <owl:DatatypeProperty rdf:about="https://www.AHDB/connected#required">
+        <rdfs:domain rdf:resource="https://www.AHDB/connected#Input"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <dc:creator>AlmaHealthDB</dc:creator>
+        <dc:description>This property specifies whether the input is required (true) or optional (false) when invoking the interface.</dc:description>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1746144000</terms:created>
+        <rdfs:comment>specifies if the input is required or not</rdfs:comment>
+        <rdfs:label>required</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.AHDB/connected#template -->
+
+    <owl:DatatypeProperty rdf:about="https://www.AHDB/connected#template">
+        <rdfs:domain rdf:resource="https://www.AHDB/connected#WebAPI"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <dc:creator>AlmaHealthDB</dc:creator>
+        <dc:description>This property defines a string or object that outlines the expected keys and their associated value types or formats. It is intended to guide data consumers or processors in understanding the structure and requirements of a given data template</dc:description>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1746144000</terms:created>
+        <rdfs:comment>defines string or object that outlines the expected keys and their value types or formats</rdfs:comment>
+        <rdfs:label>template</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.AHDB/connected#type -->
+
+    <owl:DatatypeProperty rdf:about="https://www.AHDB/connected#type">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://www.AHDB/connected#Input"/>
+                    <rdf:Description rdf:about="https://www.AHDB/connected#Output"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <dc:creator>AlmaHealthDB</dc:creator>
+        <dc:description>This property defines the data type (e.g., string, integer...) expected for an input or output.</dc:description>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1746144000</terms:created>
+        <rdfs:comment>defines the Input&apos;s or the output&apos;s type</rdfs:comment>
+        <rdfs:label>type</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://www.AHDB/connected#Identifier -->
+
+    <owl:Class rdf:about="https://www.AHDB/connected#Identifier">
+        <dc:creator>AlmaHealthDB</dc:creator>
+        <dc:description>A class that denotes unique strings or codes used to distinguish a specific model within the platform.</dc:description>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1746144000</terms:created>
+        <rdfs:comment>represents the unique identifier of a Model</rdfs:comment>
+        <rdfs:label>Identifier</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.AHDB/connected#Implementation -->
+
+    <owl:Class rdf:about="https://www.AHDB/connected#Implementation">
+        <dc:creator>AlmaHealthDB</dc:creator>
+        <dc:description>A class that corresponds to operational components or services that fulfill the defined behavior of a model.</dc:description>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1746144000</terms:created>
+        <rdfs:comment>An Implementation defines the internal workings of one or more Interface</rdfs:comment>
+        <rdfs:label>Implementation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.AHDB/connected#Input -->
+
+    <owl:Class rdf:about="https://www.AHDB/connected#Input">
+        <owl:disjointWith rdf:resource="https://www.AHDB/connected#Output"/>
+        <dc:creator>AlmaHealthDB</dc:creator>
+        <dc:description>A class that describes the formal structure of an input of an interface.</dc:description>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1746144000</terms:created>
+        <rdfs:comment>An Input is the description of the input value of an Interface.</rdfs:comment>
+        <rdfs:label>Input</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.AHDB/connected#InputMapping -->
+
+    <owl:Class rdf:about="https://www.AHDB/connected#InputMapping">
+        <dc:creator>AlmaHealthDB</dc:creator>
+        <dc:description>A class that defines the practical implementation of an input for a specific interface, mapping actual data to the formal specification.</dc:description>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1746144000</terms:created>
+        <rdfs:comment>An input mapping clearly defines how an abstract parameter corresponds to a method&apos;s argument, either by position (e.g., the third argument) or by property name (e.g., in Web APIs).</rdfs:comment>
+        <rdfs:label>InputMapping</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.AHDB/connected#Interface -->
+
+    <owl:Class rdf:about="https://www.AHDB/connected#Interface">
+        <dc:creator>AlmaHealthDB</dc:creator>
+        <dc:description>A class that defines a formal interface for interacting with the model</dc:description>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1746144000</terms:created>
+        <rdfs:comment>An Interface is a process that performs a specific task by associating one or more Parameters to an Output</rdfs:comment>
+        <rdfs:label>Interface</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.AHDB/connected#Mantainer -->
+
+    <owl:Class rdf:about="https://www.AHDB/connected#Mantainer">
+        <dc:creator>AlmaHealthDB</dc:creator>
+        <dc:description>A class representing an individual or entity responsible for the maintenance, and updating of a machine learning model.</dc:description>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1746144000</terms:created>
+        <rdfs:comment>Maintainer is individual or organization responsible for the ongoing management, validation, and updates of the model</rdfs:comment>
+        <rdfs:label>Mantainer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.AHDB/connected#Mapping -->
+
+    <owl:Class rdf:about="https://www.AHDB/connected#Mapping">
+        <dc:creator>AlmaHealthDB</dc:creator>
+        <dc:description>A class representing the binding between an abstract interface and a concrete implementation.</dc:description>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1746144000</terms:created>
+        <rdfs:comment>A Mapping links (abstract) Interface and (concrete) Implementation</rdfs:comment>
+        <rdfs:label>Mapping</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.AHDB/connected#Model -->
+
+    <owl:Class rdf:about="https://www.AHDB/connected#Model">
+        <dc:creator>AlmaHealthDB</dc:creator>
+        <dc:description>A class that rapresent a machine learning/computational/predictive model</dc:description>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1746144000</terms:created>
+        <rdfs:comment>A model is a formal abstraction or conceptualization that encapsulates the behavior, purpose, and intended usage of a machine learning model, independent of its specific implementation details</rdfs:comment>
+        <rdfs:label>Model</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.AHDB/connected#Output -->
+
+    <owl:Class rdf:about="https://www.AHDB/connected#Output">
+        <dc:creator>AlmaHealthDB</dc:creator>
+        <dc:description>A class that describes the formal structure of an output of an interface.</dc:description>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1746144000</terms:created>
+        <rdfs:comment>An Output is the description of the output value of an Interface.</rdfs:comment>
+        <rdfs:label>Output</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.AHDB/connected#OutputMapping -->
+
+    <owl:Class rdf:about="https://www.AHDB/connected#OutputMapping">
+        <dc:creator>AlmaHealthDB</dc:creator>
+        <dc:description>A class that defines the practical implementation of an output for a specific interface, mapping actual data to the formal specification.</dc:description>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1746144000</terms:created>
+        <rdfs:comment>An output mapping links the return value of the method to an output</rdfs:comment>
+        <rdfs:label>OutputMapping</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.AHDB/connected#PositionInputMapping -->
+
+    <owl:Class rdf:about="https://www.AHDB/connected#PositionInputMapping">
+        <dc:creator>AlmaHealthDB</dc:creator>
+        <dc:description>A class that represents an input mapping where the input is passed to the interface of a model based on its positional index in the parameter list.</dc:description>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1746144000</terms:created>
+        <rdfs:comment>A position parameter mapping uses a position to map a parameter of an implementation to a parameter</rdfs:comment>
+        <rdfs:label>PositionInputMapping</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.AHDB/connected#PropertyInputMapping -->
+
+    <owl:Class rdf:about="https://www.AHDB/connected#PropertyInputMapping">
+        <dc:creator>AlmaHealthDB</dc:creator>
+        <dc:description>A class that represents an input mapping where the input is passed to the interface of a model based on its name.</dc:description>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1746144000</terms:created>
+        <rdfs:comment>A property parameter mapping uses a property string to map a parameter of an implementation to a parameter</rdfs:comment>
+        <rdfs:label>PropertyInputMapping</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.AHDB/connected#URIIdentifier -->
+
+    <owl:Class rdf:about="https://www.AHDB/connected#URIIdentifier">
+        <rdfs:subClassOf rdf:resource="https://www.AHDB/connected#Identifier"/>
+        <dc:creator>AlmaHealthDB</dc:creator>
+        <dc:description>A class that denotes an identifier in URI format.</dc:description>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1746144000</terms:created>
+        <rdfs:comment>identifier in URI format</rdfs:comment>
+        <rdfs:label>URIIdentifier</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.AHDB/connected#UUIDIdentifier -->
+
+    <owl:Class rdf:about="https://www.AHDB/connected#UUIDIdentifier">
+        <rdfs:subClassOf rdf:resource="https://www.AHDB/connected#Identifier"/>
+        <dc:creator>AlmaHealthDB</dc:creator>
+        <dc:description>A class that denotes an identifier in UUID format.</dc:description>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1746144000</terms:created>
+        <rdfs:comment>Identifier in UUID format</rdfs:comment>
+        <rdfs:label>UUIDIdentifier</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.AHDB/connected#WebAPI -->
+
+    <owl:Class rdf:about="https://www.AHDB/connected#WebAPI">
+        <rdfs:subClassOf rdf:resource="https://www.AHDB/connected#Implementation"/>
+        <dc:creator>AlmaHealthDB</dc:creator>
+        <dc:description>A class that represents the implementation of a model&apos;s behavior as a Web API, exposing its operations through standardized HTTP interface</dc:description>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1746144000</terms:created>
+        <rdfs:comment>an implementation of an interface as a Web API</rdfs:comment>
+        <rdfs:label>WebAPI</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://www.AHDB/connected#BodyParam -->
+
+    <owl:NamedIndividual rdf:about="https://www.AHDB/connected#BodyParam"/>
+    
+
+
+    <!-- https://www.AHDB/connected#Boolean -->
+
+    <owl:NamedIndividual rdf:about="https://www.AHDB/connected#Boolean"/>
+    
+
+
+    <!-- https://www.AHDB/connected#Delete -->
+
+    <owl:NamedIndividual rdf:about="https://www.AHDB/connected#Delete"/>
+    
+
+
+    <!-- https://www.AHDB/connected#Double -->
+
+    <owl:NamedIndividual rdf:about="https://www.AHDB/connected#Double"/>
+    
+
+
+    <!-- https://www.AHDB/connected#Float -->
+
+    <owl:NamedIndividual rdf:about="https://www.AHDB/connected#Float"/>
+    
+
+
+    <!-- https://www.AHDB/connected#Get -->
+
+    <owl:NamedIndividual rdf:about="https://www.AHDB/connected#Get"/>
+    
+
+
+    <!-- https://www.AHDB/connected#Int -->
+
+    <owl:NamedIndividual rdf:about="https://www.AHDB/connected#Int"/>
+    
+
+
+    <!-- https://www.AHDB/connected#Patch -->
+
+    <owl:NamedIndividual rdf:about="https://www.AHDB/connected#Patch"/>
+    
+
+
+    <!-- https://www.AHDB/connected#Post -->
+
+    <owl:NamedIndividual rdf:about="https://www.AHDB/connected#Post"/>
+    
+
+
+    <!-- https://www.AHDB/connected#Put -->
+
+    <owl:NamedIndividual rdf:about="https://www.AHDB/connected#Put"/>
+    
+
+
+    <!-- https://www.AHDB/connected#QueryParam -->
+
+    <owl:NamedIndividual rdf:about="https://www.AHDB/connected#QueryParam"/>
+    
+
+
+    <!-- https://www.AHDB/connected#String -->
+
+    <owl:NamedIndividual rdf:about="https://www.AHDB/connected#String"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
