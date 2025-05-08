@@ -1,0 +1,37 @@
+{
+  "name": "example-ontology",
+  "title": "Example Ontology Dataset",
+  "description": "This package contains an OWL ontology describing example entities and includes VoID metadata.",
+  "version": "1.0.0",
+  "keywords": ["ontology", "rdf", "linked data", "owl", "void"],
+  "licenses": [
+    {
+      "name": "CC-BY-4.0",
+      "title": "Creative Commons Attribution 4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "contributors": [
+    {
+      "title": "Jane Doe",
+      "role": "author",
+      "email": "jane.doe@example.org"
+    }
+  ],
+  "resources": [
+    {
+      "name": "ontology",
+      "title": "OWL Ontology File",
+      "path": "ontology.owl",
+      "format": "owl",
+      "mediatype": "application/rdf+xml"
+    },
+    {
+      "name": "void",
+      "title": "VoID Metadata",
+      "path": "void.ttl",
+      "format": "ttl",
+      "mediatype": "text/turtle"
+    }
+  ]
+}
