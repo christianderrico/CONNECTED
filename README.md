@@ -1,1 +1,1 @@
-Connected Ontology
+MIMO Ontology
