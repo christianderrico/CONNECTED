@@ -1,0 +1,505 @@
+@prefix : <https://www.AHDB/connected#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix mco: <http://sbmi.uth.edu/ontology/mco#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@base <https://www.AHDB/connected#> .
+
+[ rdf:type owl:Ontology
+ ] .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/creator
+dc:creator rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/description
+dc:description rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+dc:title rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/created
+dcterms:created rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+dcterms:creator rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+dcterms:description rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/publisher
+dcterms:publisher rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/subject
+dcterms:subject rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+dcterms:title rdf:type owl:AnnotationProperty .
+
+
+###  http://rdfs.org/ns/void#dataDump
+void:dataDump rdf:type owl:AnnotationProperty .
+
+
+###  http://rdfs.org/ns/void#triples
+void:triples rdf:type owl:AnnotationProperty .
+
+
+###  http://sbmi.uth.edu/ontology/mco#contact_text
+mco:contact_text rdf:type owl:AnnotationProperty .
+
+
+###  http://sbmi.uth.edu/ontology/mco#documentation
+mco:documentation rdf:type owl:AnnotationProperty .
+
+
+###  http://sbmi.uth.edu/ontology/mco#name_text
+mco:name_text rdf:type owl:AnnotationProperty .
+
+
+###  http://sbmi.uth.edu/ontology/mco#overview
+mco:overview rdf:type owl:AnnotationProperty .
+
+
+###  http://www.geneontology.org/formats/oboInOwl#created_by
+<http://www.geneontology.org/formats/oboInOwl#created_by> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.geneontology.org/formats/oboInOwl#creation_date
+<http://www.geneontology.org/formats/oboInOwl#creation_date> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#closeMatch
+<http://www.w3.org/2004/02/skos/core#closeMatch> rdf:type owl:AnnotationProperty .
+
+
+###  http://xmlns.com/foaf/0.1/homepage
+foaf:homepage rdf:type owl:AnnotationProperty .
+
+
+###  http://xmlns.com/foaf/0.1/mbox
+foaf:mbox rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://www.AHDB/connected#expects
+:expects rdf:type owl:ObjectProperty ,
+                  owl:AsymmetricProperty ,
+                  owl:IrreflexiveProperty ;
+         rdfs:domain :Interface ;
+         rdfs:range :Input ;
+         dcterms:created 1746144000 ;
+         dcterms:creator "AlmaHealthDB" ;
+         dcterms:description "This property links a model interface to Inputs that must be provided when calling the interface. It defines the expected parameters required for execution." ;
+         rdfs:comment "Connects a model interface to a parameter description" ;
+         rdfs:label "expects" .
+
+
+###  https://www.AHDB/connected#hasIdentifier
+:hasIdentifier rdf:type owl:ObjectProperty ,
+                        owl:FunctionalProperty ,
+                        owl:InverseFunctionalProperty ,
+                        owl:AsymmetricProperty ,
+                        owl:IrreflexiveProperty ;
+               rdfs:domain :Model ;
+               rdfs:range :Identifier ;
+               dcterms:created 1746144000 ;
+               dcterms:creator "AlmaHealthDB" ;
+               dcterms:description "This property links a model to its unique identifier" ;
+               rdfs:comment "links a Model to its unique idenitifier" ;
+               rdfs:label "hasIdentifier" .
+
+
+###  https://www.AHDB/connected#hasInterface
+:hasInterface rdf:type owl:ObjectProperty ,
+                       owl:InverseFunctionalProperty ,
+                       owl:AsymmetricProperty ,
+                       owl:IrreflexiveProperty ;
+              rdfs:domain :Model ;
+              rdfs:range :Interface ;
+              dcterms:created 1746144000 ;
+              dcterms:creator "AlmaHealthDB" ;
+              dcterms:description "This property links a model to its specific exposing interface" ;
+              rdfs:comment "links a Model to its exposing Inteface" ;
+              rdfs:label "hasInterface" .
+
+
+###  https://www.AHDB/connected#hasMaintainer
+:hasMaintainer rdf:type owl:ObjectProperty ,
+                        owl:AsymmetricProperty ,
+                        owl:IrreflexiveProperty ;
+               rdfs:domain :Model ;
+               rdfs:range :Mantainer ;
+               dcterms:created 1746144000 ;
+               dcterms:creator "AlmaHealthDB" ;
+               dcterms:description "This property links a model to its maintaner" ;
+               rdfs:comment "links a Model to its maintainer" ;
+               rdfs:label "hasMaintainer" .
+
+
+###  https://www.AHDB/connected#implementation
+:implementation rdf:type owl:ObjectProperty ,
+                         owl:FunctionalProperty ,
+                         owl:InverseFunctionalProperty ,
+                         owl:AsymmetricProperty ,
+                         owl:IrreflexiveProperty ;
+                rdfs:domain :Mapping ;
+                rdfs:range :Implementation ;
+                dcterms:created 1746144000 ;
+                dcterms:creator "AlmaHealthDB" ;
+                dcterms:description "This property links an implementation to a mapping, which serves as the binding point between the formal interface definition and its concrete realization." ;
+                rdfs:comment "specifies a concrete implementation within a mapping" ;
+                rdfs:label "implementation" .
+
+
+###  https://www.AHDB/connected#inputMapping
+:inputMapping rdf:type owl:ObjectProperty ,
+                       owl:AsymmetricProperty ,
+                       owl:IrreflexiveProperty ;
+              rdfs:domain :Mapping ;
+              rdfs:range :InputMapping ;
+              dcterms:created 1746144000 ;
+              dcterms:creator "AlmaHealthDB" ;
+              dcterms:description "This property connects an abstract input to a mapping, which serves as the binding point between its formal interface definition and its concrete realization." ;
+              rdfs:comment "links a concrete input description to a mapping" ;
+              rdfs:label "inputMapping" .
+
+
+###  https://www.AHDB/connected#interface
+:interface rdf:type owl:ObjectProperty ,
+                    owl:FunctionalProperty ,
+                    owl:InverseFunctionalProperty ,
+                    owl:AsymmetricProperty ,
+                    owl:IrreflexiveProperty ;
+           rdfs:domain :Mapping ;
+           rdfs:range :Interface ;
+           dcterms:created 1746144000 ;
+           dcterms:creator "AlmaHealthDB" ;
+           dcterms:description "This property links a model interface to a mapping, which serves as the binding point between its formal definition and its concrete realization." ;
+           rdfs:comment "links a concrete mapping to a model interface" ;
+           rdfs:label "interface" .
+
+
+###  https://www.AHDB/connected#outputMapping
+:outputMapping rdf:type owl:ObjectProperty ,
+                        owl:AsymmetricProperty ,
+                        owl:IrreflexiveProperty ;
+               rdfs:domain :Mapping ;
+               rdfs:range :OutputMapping ;
+               dcterms:created 1746144000 ;
+               dcterms:creator "AlmaHealthDB" ;
+               dcterms:description "This property connects an abstract output to a mapping, which serves as the binding point between its formal interface definition and its concrete realization." ;
+               rdfs:comment "links a mapping  to an outputMapping" ;
+               rdfs:label "outputMapping" .
+
+
+###  https://www.AHDB/connected#returns
+:returns rdf:type owl:ObjectProperty ,
+                  owl:AsymmetricProperty ,
+                  owl:IrreflexiveProperty ;
+         rdfs:domain :Interface ;
+         rdfs:range :Output ;
+         dcterms:created 1746144000 ;
+         dcterms:creator "AlmaHealthDB" ;
+         dcterms:description "This property links a model interface to Outputs that must be provided when calling the interface. It defines the expected parameters required for execution." ;
+         rdfs:label "returns" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://www.AHDB/connected#contentType
+:contentType rdf:type owl:DatatypeProperty ;
+             rdfs:domain :WebAPI ;
+             rdfs:range xsd:string ;
+             dcterms:created 1746144000 ;
+             dcterms:creator "AlmaHealthDB" ;
+             dcterms:description "This property indicates the expected content type (e.g., 'application/json', 'text/csv') for data sent to a WebAPI. It allows clients to understand how to format their requests properly." ;
+             rdfs:comment "defines the Content-type of the resources expected by the WebAPI" ;
+             rdfs:label "contentType" .
+
+
+###  https://www.AHDB/connected#entrypoint
+:entrypoint rdf:type owl:DatatypeProperty ;
+            rdfs:domain :WebAPI ;
+            rdfs:range xsd:anyURI ;
+            dcterms:created 1746144000 ;
+            dcterms:creator "AlmaHealthDB" ;
+            dcterms:description "This property defines the actual endpoint (typically an HTTP or HTTPS URI) through which the WebAPI can be invoked by clients." ;
+            rdfs:comment "defines the entrypoint to contact the WebAPI" ;
+            rdfs:label "entrypoint" .
+
+
+###  https://www.AHDB/connected#method
+:method rdf:type owl:DatatypeProperty ;
+        rdfs:domain :WebAPI ;
+        rdfs:range xsd:anyURI ;
+        dcterms:created 1746144000 ;
+        dcterms:creator "AlmaHealthDB" ;
+        dcterms:description "This property indicates which HTTP method (e.g., 'GET', 'POST') must be used when invoking the WebAPI endpoint." ;
+        rdfs:comment "defines the method exposed by the WebAPI" ;
+        rdfs:label "method" .
+
+
+###  https://www.AHDB/connected#position
+:position rdf:type owl:DatatypeProperty ;
+          rdfs:domain :PositionInputMapping ;
+          rdfs:range xsd:integer ;
+          dcterms:created 1746144000 ;
+          dcterms:creator "AlmaHealthDB" ;
+          dcterms:description "This property specifies the position of an input parameter passed to the concrete implementation of an interface." ;
+          rdfs:comment "defines the position of the input" ;
+          rdfs:label "position" .
+
+
+###  https://www.AHDB/connected#property
+:property rdf:type owl:DatatypeProperty ;
+          rdfs:domain :PropertyInputMapping ;
+          rdfs:range xsd:integer ;
+          dcterms:created 1746144000 ;
+          dcterms:creator "AlmaHealthDB" ;
+          dcterms:description "This property specifies the name of the input parameter as it is passed to the concrete implementation of an interface." ;
+          rdfs:comment "defines the mapped property name" ;
+          rdfs:label "property" .
+
+
+###  https://www.AHDB/connected#required
+:required rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Input ;
+          rdfs:range xsd:boolean ;
+          dcterms:created 1746144000 ;
+          dcterms:creator "AlmaHealthDB" ;
+          dcterms:description "This property specifies whether the input is required (true) or optional (false) when invoking the interface." ;
+          rdfs:comment "specifies if the input is required or not" ;
+          rdfs:label "required" .
+
+
+###  https://www.AHDB/connected#template
+:template rdf:type owl:DatatypeProperty ;
+          rdfs:domain :WebAPI ;
+          rdfs:range xsd:string ;
+          dcterms:created 1746144000 ;
+          dcterms:creator "AlmaHealthDB" ;
+          dcterms:description "This property defines a string or object that outlines the expected keys and their associated value types or formats. It is intended to guide data consumers or processors in understanding the structure and requirements of a given data template" ;
+          rdfs:comment "defines string or object that outlines the expected keys and their value types or formats" ;
+          rdfs:label "template" .
+
+
+###  https://www.AHDB/connected#type
+:type rdf:type owl:DatatypeProperty ;
+      rdfs:domain [ rdf:type owl:Class ;
+                    owl:unionOf ( :Input
+                                  :Output
+                                )
+                  ] ;
+      dcterms:created 1746144000 ;
+      dcterms:creator "AlmaHealthDB" ;
+      dcterms:description "This property defines the data type (e.g., string, integer...) expected for an input or output." ;
+      rdfs:comment "defines the Input's or the output's type" ;
+      rdfs:label "type" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://rdfs.org/ns/void#Dataset
+void:Dataset rdf:type owl:Class .
+
+
+###  https://www.AHDB/connected#Identifier
+:Identifier rdf:type owl:Class ;
+            dcterms:created 1746144000 ;
+            dcterms:creator "AlmaHealthDB" ;
+            dcterms:description "A class that denotes unique strings or codes used to distinguish a specific model within the platform." ;
+            rdfs:comment "represents the unique identifier of a Model" ;
+            rdfs:label "Identifier" .
+
+
+###  https://www.AHDB/connected#Implementation
+:Implementation rdf:type owl:Class ;
+                dcterms:created 1746144000 ;
+                dcterms:creator "AlmaHealthDB" ;
+                dcterms:description "A class that corresponds to operational components or services that fulfill the defined behavior of a model." ;
+                rdfs:comment "An Implementation defines the internal workings of one or more Interface" ;
+                rdfs:label "Implementation" .
+
+
+###  https://www.AHDB/connected#Input
+:Input rdf:type owl:Class ;
+       owl:disjointWith :Output ;
+       dcterms:created 1746144000 ;
+       dcterms:creator "AlmaHealthDB" ;
+       dcterms:description "A class that describes the formal structure of an input of an interface." ;
+       rdfs:comment "An Input is the description of the input value of an Interface." ;
+       rdfs:label "Input" .
+
+
+###  https://www.AHDB/connected#InputMapping
+:InputMapping rdf:type owl:Class ;
+              owl:disjointWith :OutputMapping ;
+              dcterms:created 1746144000 ;
+              dcterms:creator "AlmaHealthDB" ;
+              dcterms:description "A class that defines the practical implementation of an input for a specific interface, mapping actual data to the formal specification." ;
+              rdfs:comment "An input mapping clearly defines how an abstract parameter corresponds to a method's argument, either by position (e.g., the third argument) or by property name (e.g., in Web APIs)." ;
+              rdfs:label "InputMapping" .
+
+
+###  https://www.AHDB/connected#Interface
+:Interface rdf:type owl:Class ;
+           dcterms:created 1746144000 ;
+           dcterms:creator "AlmaHealthDB" ;
+           dcterms:description "A class that defines a formal interface for interacting with the model" ;
+           rdfs:comment "An Interface is a process that performs a specific task by associating one or more Parameters to an Output" ;
+           rdfs:label "Interface" .
+
+
+###  https://www.AHDB/connected#Mantainer
+:Mantainer rdf:type owl:Class ;
+           dcterms:created 1746144000 ;
+           dcterms:creator "AlmaHealthDB" ;
+           dcterms:description "A class representing an individual or entity responsible for the maintenance, and updating of a machine learning model." ;
+           rdfs:comment "Maintainer is individual or organization responsible for the ongoing management, validation, and updates of the model" ;
+           rdfs:label "Mantainer" .
+
+
+###  https://www.AHDB/connected#Mapping
+:Mapping rdf:type owl:Class ;
+         dcterms:created 1746144000 ;
+         dcterms:creator "AlmaHealthDB" ;
+         dcterms:description "A class representing the binding between an abstract interface and a concrete implementation." ;
+         rdfs:comment "A Mapping links (abstract) Interface and (concrete) Implementation" ;
+         rdfs:label "Mapping" .
+
+
+###  https://www.AHDB/connected#Model
+:Model rdf:type owl:Class ;
+       dcterms:created 1746144000 ;
+       dcterms:creator "AlmaHealthDB" ;
+       dcterms:description "A class that rapresent a machine learning/computational/predictive model" ;
+       rdfs:comment "A model is a formal abstraction or conceptualization that encapsulates the behavior, purpose, and intended usage of a machine learning model, independent of its specific implementation details" ;
+       rdfs:label "Model" .
+
+
+###  https://www.AHDB/connected#Output
+:Output rdf:type owl:Class ;
+        dcterms:created 1746144000 ;
+        dcterms:creator "AlmaHealthDB" ;
+        dcterms:description "A class that describes the formal structure of an output of an interface." ;
+        rdfs:comment "An Output is the description of the output value of an Interface." ;
+        rdfs:label "Output" .
+
+
+###  https://www.AHDB/connected#OutputMapping
+:OutputMapping rdf:type owl:Class ;
+               dcterms:created 1746144000 ;
+               dcterms:creator "AlmaHealthDB" ;
+               dcterms:description "A class that defines the practical implementation of an output for a specific interface, mapping actual data to the formal specification." ;
+               rdfs:comment "An output mapping links the return value of the method to an output" ;
+               rdfs:label "OutputMapping" .
+
+
+###  https://www.AHDB/connected#PositionInputMapping
+:PositionInputMapping rdf:type owl:Class ;
+                      rdfs:subClassOf :InputMapping ;
+                      owl:disjointWith :PropertyInputMapping ;
+                      dcterms:created 1746144000 ;
+                      dcterms:creator "AlmaHealthDB" ;
+                      dcterms:description "A class that represents an input mapping where the input is passed to the interface of a model based on its positional index in the parameter list." ;
+                      rdfs:comment "A position parameter mapping uses a position to map a parameter of an implementation to a parameter" ;
+                      rdfs:label "PositionInputMapping" .
+
+
+###  https://www.AHDB/connected#PropertyInputMapping
+:PropertyInputMapping rdf:type owl:Class ;
+                      rdfs:subClassOf :InputMapping ;
+                      dcterms:created 1746144000 ;
+                      dcterms:creator "AlmaHealthDB" ;
+                      dcterms:description "A class that represents an input mapping where the input is passed to the interface of a model based on its name." ;
+                      rdfs:comment "A property parameter mapping uses a property string to map a parameter of an implementation to a parameter" ;
+                      rdfs:label "PropertyInputMapping" .
+
+
+###  https://www.AHDB/connected#URIIdentifier
+:URIIdentifier rdf:type owl:Class ;
+               rdfs:subClassOf :Identifier ;
+               owl:disjointWith :UUIDIdentifier ;
+               dc:creator "AlmaHealthDB" ;
+               dc:description "A class that denotes an identifier in URI format." ;
+               dcterms:created 1746144000 ;
+               rdfs:comment "identifier in URI format" ;
+               rdfs:label "URIIdentifier" .
+
+
+###  https://www.AHDB/connected#UUIDIdentifier
+:UUIDIdentifier rdf:type owl:Class ;
+                rdfs:subClassOf :Identifier ;
+                dc:creator "AlmaHealthDB" ;
+                dc:description "A class that denotes an identifier in UUID format." ;
+                dcterms:created 1746144000 ;
+                rdfs:comment "Identifier in UUID format" ;
+                rdfs:label "UUIDIdentifier" .
+
+
+###  https://www.AHDB/connected#WebAPI
+:WebAPI rdf:type owl:Class ;
+        rdfs:subClassOf :Implementation ;
+        dc:creator "AlmaHealthDB" ;
+        dc:description "A class that represents the implementation of a model's behavior as a Web API, exposing its operations through standardized HTTP interface" ;
+        dcterms:created 1746144000 ;
+        rdfs:comment "an implementation of an interface as a Web API" ;
+        rdfs:label "WebAPI" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://lod-cloud.net/dataset/CONNECTED
+<http://lod-cloud.net/dataset/CONNECTED> rdf:type owl:NamedIndividual ,
+                                                  void:Dataset ;
+                                         dcterms:description "This is the Connected Ontology, a knowledge graph to model the concept of Manifest. The Manifest is a machine-readable formal description that enriches the model with a detailed explanation of its interface, adopting existing standards and ontologies, such as LOINC, SNOMED-CT, and UOM. It essentially allows us to produce a computable version of the model that can be shared, reused, and linked. The adoption of the Manifest allows for the development of algorithms to automatically index models, aggregate their capabilities, and exploit them to deal with complex tasks. By using an ontology to construct our formal representation of ML models, we standardize the nomenclature and representation of ML model reports, essentially producing a computable version of the model that can be shared, reused, and linked. Manifests are computable artifacts, able to link information about ML models, leverage semantic reasoning to link the information, and open up software tooling opportunities, aggregation of models, and querying of the information for healthcare ML research."@en ;
+                                         dcterms:publisher [ rdfs:label "Christian D'Errico" ;
+                                                             foaf:mbox "christian.derrico2@unibo.it"
+                                                           ] ,
+                                                           [ rdfs:label "Christian D'Errico" ;
+                                                             foaf:mbox "christian.derrico2@unibo.it"
+                                                           ] ,
+                                                           [ rdfs:label "Christian D'Errico" ;
+                                                             foaf:mbox "christian.derrico2@unibo.it"
+                                                           ] ;
+                                         dcterms:subject "AI models" ,
+                                                         "Digital twins" ,
+                                                         "digital healthcare" ,
+                                                         "life_sciences" ,
+                                                         "patient monitoring" ,
+                                                         "personalized care" ;
+                                         dcterms:title "Connected_ontology"@en ;
+                                         void:dataDump <https://christianderrico.github.io/CONNECTED_ONTOLOGY/ConnectedOntology.owl> ;
+                                         void:triples 3777 ;
+                                         foaf:homepage <https://christianderrico.github.io/CONNECTED_ONTOLOGY> .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
