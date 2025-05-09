@@ -7,13 +7,16 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:dcat="http://www.w3.org/ns/dcat#"
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:void="http://rdfs.org/ns/void#"
      xmlns:dcterms="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
-    <owl:Ontology/>
+    <owl:Ontology>
+        <owl:imports rdf:resource="file:/C:/Users/chris/Desktop/void.ttl"/>
+    </owl:Ontology>
     
 
 
@@ -449,12 +452,6 @@
     
 
 
-    <!-- http://rdfs.org/ns/void#Dataset -->
-
-    <owl:Class rdf:about="http://rdfs.org/ns/void#Dataset"/>
-    
-
-
     <!-- https://www.AHDB/connected#Identifier -->
 
     <owl:Class rdf:about="https://www.AHDB/connected#Identifier">
@@ -641,53 +638,22 @@
         <rdfs:comment>an implementation of an interface as a Web API</rdfs:comment>
         <rdfs:label>WebAPI</rdfs:label>
     </owl:Class>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Individuals
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://lod-cloud.net/dataset/CONNECTED -->
-
-    <owl:NamedIndividual rdf:about="http://lod-cloud.net/dataset/CONNECTED">
-        <rdf:type rdf:resource="http://rdfs.org/ns/void#Dataset"/>
-        <dcterms:description xml:lang="en">This is the Connected Ontology, a knowledge graph to model the concept of Manifest. The Manifest is a machine-readable formal description that enriches the model with a detailed explanation of its interface, adopting existing standards and ontologies, such as LOINC, SNOMED-CT, and UOM. It essentially allows us to produce a computable version of the model that can be shared, reused, and linked. The adoption of the Manifest allows for the development of algorithms to automatically index models, aggregate their capabilities, and exploit them to deal with complex tasks. By using an ontology to construct our formal representation of ML models, we standardize the nomenclature and representation of ML model reports, essentially producing a computable version of the model that can be shared, reused, and linked. Manifests are computable artifacts, able to link information about ML models, leverage semantic reasoning to link the information, and open up software tooling opportunities, aggregation of models, and querying of the information for healthcare ML research.</dcterms:description>
-        <dcterms:publisher>
-            <rdf:Description>
-                <rdfs:label>Christian D&apos;Errico</rdfs:label>
-                <foaf:mbox>christian.derrico2@unibo.it</foaf:mbox>
-            </rdf:Description>
-        </dcterms:publisher>
-        <dcterms:publisher>
-            <rdf:Description>
-                <rdfs:label>Christian D&apos;Errico</rdfs:label>
-                <foaf:mbox>christian.derrico2@unibo.it</foaf:mbox>
-            </rdf:Description>
-        </dcterms:publisher>
-        <dcterms:publisher>
-            <rdf:Description>
-                <rdfs:label>Christian D&apos;Errico</rdfs:label>
-                <foaf:mbox>christian.derrico2@unibo.it</foaf:mbox>
-            </rdf:Description>
-        </dcterms:publisher>
-        <dcterms:subject>AI models</dcterms:subject>
-        <dcterms:subject>Digital twins</dcterms:subject>
-        <dcterms:subject>digital healthcare</dcterms:subject>
-        <dcterms:subject>life_sciences</dcterms:subject>
-        <dcterms:subject>patient monitoring</dcterms:subject>
-        <dcterms:subject>personalized care</dcterms:subject>
-        <dcterms:title xml:lang="en">Connected_ontology</dcterms:title>
-        <void:dataDump rdf:resource="https://christianderrico.github.io/CONNECTED_ONTOLOGY/ConnectedOntology.owl"/>
-        <void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3777</void:triples>
-    </owl:NamedIndividual>
+    <rdf:Description>
+        <rdfs:label>Christian D&apos;Errico</rdfs:label>
+        <foaf:mbox>christian.derrico2@unibo.it</foaf:mbox>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>Christian D&apos;Errico</rdfs:label>
+        <foaf:mbox>christian.derrico2@unibo.it</foaf:mbox>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>Christian D&apos;Errico</rdfs:label>
+        <foaf:mbox>christian.derrico2@unibo.it</foaf:mbox>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>Christian D&apos;Errico</rdfs:label>
+        <foaf:mbox>christian.derrico2@unibo.it</foaf:mbox>
+    </rdf:Description>
 </rdf:RDF>
 
 
