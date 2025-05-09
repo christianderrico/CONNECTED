@@ -160,6 +160,12 @@
     
 
 
+    <!-- http://www.w3.org/2004/02/skos/core#broader -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#broader"/>
+    
+
+
     <!-- https://www.AHDB/connected#expects -->
 
     <owl:ObjectProperty rdf:about="https://www.AHDB/connected#expects">
@@ -636,6 +642,32 @@
         <rdfs:comment>an implementation of an interface as a Web API</rdfs:comment>
         <rdfs:label>WebAPI</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#test -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#test">
+        <rdf:type rdf:resource="https://www.AHDB/connected#Model"/>
+        <skos:broader rdf:resource="https://www.wikidata.org/wiki/Q30304659"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.wikidata.org/wiki/Q30304659 -->
+
+    <owl:NamedIndividual rdf:about="https://www.wikidata.org/wiki/Q30304659"/>
     <rdf:Description>
         <rdfs:label>Christian D&apos;Errico</rdfs:label>
         <foaf:mbox>christian.derrico2@unibo.it</foaf:mbox>
