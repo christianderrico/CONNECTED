@@ -660,8 +660,15 @@
 
     <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#test">
         <rdf:type rdf:resource="https://www.AHDB/connected#Model"/>
+        <owl:sameAs rdf:resource="https://www.wikidata.org/wiki/Q30304659"/>
         <skos:broader rdf:resource="https://www.wikidata.org/wiki/Q30304659"/>
     </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.wikidata.org/wiki/Q30304659 -->
+
+    <rdf:Description rdf:about="https://www.wikidata.org/wiki/Q30304659"/>
     
 
 
