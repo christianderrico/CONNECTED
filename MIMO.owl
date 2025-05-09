@@ -14,9 +14,7 @@
      xmlns:void="http://rdfs.org/ns/void#"
      xmlns:dcterms="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
-    <owl:Ontology>
-        <owl:imports rdf:resource="file:/C:/Users/chris/Desktop/void.ttl"/>
-    </owl:Ontology>
+    <owl:Ontology/>
     
 
 
@@ -638,6 +636,10 @@
         <rdfs:comment>an implementation of an interface as a Web API</rdfs:comment>
         <rdfs:label>WebAPI</rdfs:label>
     </owl:Class>
+    <rdf:Description>
+        <rdfs:label>Christian D&apos;Errico</rdfs:label>
+        <foaf:mbox>christian.derrico2@unibo.it</foaf:mbox>
+    </rdf:Description>
     <rdf:Description>
         <rdfs:label>Christian D&apos;Errico</rdfs:label>
         <foaf:mbox>christian.derrico2@unibo.it</foaf:mbox>
