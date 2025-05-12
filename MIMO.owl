@@ -3,6 +3,7 @@
      xml:base="https://www.AHDB/connected"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:mco="http://sbmi.uth.edu/ontology/mco#"
+     xmlns:ont="http://www.co-ode.org/ontologies/ont.owl#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -160,6 +161,55 @@
     
 
 
+    <!-- http://www.co-ode.org/ontologies/ont.owl#describe -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#describe">
+        <owl:inverseOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#hasCode"/>
+        <rdfs:label>describe</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#hasCode -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#hasCode">
+        <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1747008000</dcterms:created>
+        <dcterms:creator>AlmaHealthDB</dcterms:creator>
+        <dcterms:description>This property associates model input or output with its corresponding LOINC code, a standardized identifier used in the LOINC terminology to uniquely represent clinical data.</dcterms:description>
+        <rdfs:comment>links an input or an output to its corresponding LOINC code</rdfs:comment>
+        <rdfs:label>hasCode</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#interfaceInput -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#interfaceInput">
+        <rdfs:domain rdf:resource="https://www.AHDB/connected#InputMapping"/>
+        <rdfs:range rdf:resource="https://www.AHDB/connected#Input"/>
+        <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1747008000</dcterms:created>
+        <dcterms:creator>AlmaHealthDB</dcterms:creator>
+        <dcterms:description>This property associates a concrete input parameter, as defined in the implementation of an interface, with its corresponding description.</dcterms:description>
+        <rdfs:comment>links a concrete input parameter of an interface implementation to its description.</rdfs:comment>
+        <rdfs:label>interfaceInput</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#interfaceOutput -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#interfaceOutput">
+        <rdfs:domain rdf:resource="https://www.AHDB/connected#OutputMapping"/>
+        <rdfs:range rdf:resource="https://www.AHDB/connected#Output"/>
+        <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1747008000</dcterms:created>
+        <dcterms:creator>AlmaHealthDB</dcterms:creator>
+        <dcterms:description>This property associates a concrete output parameter, as defined in the implementation of an interface, with its corresponding description.</dcterms:description>
+        <rdfs:comment>links a concrete output parameter of an interface implementation to its description.</rdfs:comment>
+        <rdfs:label>interfaceOutput</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.w3.org/2004/02/skos/core#broader -->
 
     <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#broader"/>
@@ -178,24 +228,6 @@
         <dcterms:description>This property links a model interface to Inputs that must be provided when calling the interface. It defines the expected parameters required for execution.</dcterms:description>
         <rdfs:comment>Connects a model interface to a parameter description</rdfs:comment>
         <rdfs:label>expects</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://www.AHDB/connected#hasIdentifier -->
-
-    <owl:ObjectProperty rdf:about="https://www.AHDB/connected#hasIdentifier">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain rdf:resource="https://www.AHDB/connected#Model"/>
-        <rdfs:range rdf:resource="https://www.AHDB/connected#Identifier"/>
-        <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1746144000</dcterms:created>
-        <dcterms:creator>AlmaHealthDB</dcterms:creator>
-        <dcterms:description>This property links a model to its unique identifier</dcterms:description>
-        <rdfs:comment>links a Model to its unique idenitifier</rdfs:comment>
-        <rdfs:label>hasIdentifier</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -261,7 +293,7 @@
         <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1746144000</dcterms:created>
         <dcterms:creator>AlmaHealthDB</dcterms:creator>
         <dcterms:description>This property connects an abstract input to a mapping, which serves as the binding point between its formal interface definition and its concrete realization.</dcterms:description>
-        <rdfs:comment>links a concrete input description to a mapping</rdfs:comment>
+        <rdfs:comment>links a mapping  to an inputMapping</rdfs:comment>
         <rdfs:label>inputMapping</rdfs:label>
     </owl:ObjectProperty>
     
@@ -311,6 +343,7 @@
         <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1746144000</dcterms:created>
         <dcterms:creator>AlmaHealthDB</dcterms:creator>
         <dcterms:description>This property links a model interface to Outputs that must be provided when calling the interface. It defines the expected parameters required for execution.</dcterms:description>
+        <rdfs:comment>Connects a model interface to an output description</rdfs:comment>
         <rdfs:label>returns</rdfs:label>
     </owl:ObjectProperty>
     
@@ -324,6 +357,24 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/familyName -->
+
+    <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/familyName"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/givenName -->
+
+    <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/givenName"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/name -->
+
+    <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/name"/>
     
 
 
@@ -456,15 +507,9 @@
     
 
 
-    <!-- https://www.AHDB/connected#Identifier -->
+    <!-- http://www.w3.org/2000/10/swap/pim/contact#Person -->
 
-    <owl:Class rdf:about="https://www.AHDB/connected#Identifier">
-        <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1746144000</dcterms:created>
-        <dcterms:creator>AlmaHealthDB</dcterms:creator>
-        <dcterms:description>A class that denotes unique strings or codes used to distinguish a specific model within the platform.</dcterms:description>
-        <rdfs:comment>represents the unique identifier of a Model</rdfs:comment>
-        <rdfs:label>Identifier</rdfs:label>
-    </owl:Class>
+    <owl:Class rdf:about="http://www.w3.org/2000/10/swap/pim/contact#Person"/>
     
 
 
@@ -605,33 +650,6 @@
     
 
 
-    <!-- https://www.AHDB/connected#URIIdentifier -->
-
-    <owl:Class rdf:about="https://www.AHDB/connected#URIIdentifier">
-        <rdfs:subClassOf rdf:resource="https://www.AHDB/connected#Identifier"/>
-        <owl:disjointWith rdf:resource="https://www.AHDB/connected#UUIDIdentifier"/>
-        <dc:creator>AlmaHealthDB</dc:creator>
-        <dc:description>A class that denotes an identifier in URI format.</dc:description>
-        <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1746144000</dcterms:created>
-        <rdfs:comment>identifier in URI format</rdfs:comment>
-        <rdfs:label>URIIdentifier</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://www.AHDB/connected#UUIDIdentifier -->
-
-    <owl:Class rdf:about="https://www.AHDB/connected#UUIDIdentifier">
-        <rdfs:subClassOf rdf:resource="https://www.AHDB/connected#Identifier"/>
-        <dc:creator>AlmaHealthDB</dc:creator>
-        <dc:description>A class that denotes an identifier in UUID format.</dc:description>
-        <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1746144000</dcterms:created>
-        <rdfs:comment>Identifier in UUID format</rdfs:comment>
-        <rdfs:label>UUIDIdentifier</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- https://www.AHDB/connected#WebAPI -->
 
     <owl:Class rdf:about="https://www.AHDB/connected#WebAPI">
@@ -656,25 +674,213 @@
     
 
 
-    <!-- http://www.co-ode.org/ontologies/ont.owl#test -->
+    <!-- http://loinc.org/30525-0 -->
 
-    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#test">
-        <rdf:type rdf:resource="https://www.AHDB/connected#Model"/>
-        <owl:sameAs rdf:resource="https://www.wikidata.org/wiki/Q30304659"/>
-        <skos:broader rdf:resource="https://www.wikidata.org/wiki/Q30304659"/>
+    <owl:NamedIndividual rdf:about="http://loinc.org/30525-0"/>
+    
+
+
+    <!-- http://loinc.org/45643-4 -->
+
+    <owl:NamedIndividual rdf:about="http://loinc.org/45643-4"/>
+    
+
+
+    <!-- http://snomed.info/sct/866240007 -->
+
+    <owl:NamedIndividual rdf:about="http://snomed.info/sct/866240007"/>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#age -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#age">
+        <rdf:type rdf:resource="https://www.AHDB/connected#Input"/>
+        <ont:hasCode rdf:resource="http://loinc.org/30525-0"/>
+        <required rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</required>
+        <type>xsd:int</type>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://www.wikidata.org/wiki/Q30304659 -->
+    <!-- http://www.co-ode.org/ontologies/ont.owl#ageMapping -->
 
-    <rdf:Description rdf:about="https://www.wikidata.org/wiki/Q30304659"/>
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#ageMapping">
+        <rdf:type rdf:resource="https://www.AHDB/connected#PositionInputMapping"/>
+        <ont:interfaceInput rdf:resource="http://www.co-ode.org/ontologies/ont.owl#age"/>
+        <position rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</position>
+    </owl:NamedIndividual>
     
 
 
-    <!-- https://www.wikidata.org/wiki/Q30304659 -->
+    <!-- http://www.co-ode.org/ontologies/ont.owl#avg_glucose -->
 
-    <owl:NamedIndividual rdf:about="https://www.wikidata.org/wiki/Q30304659"/>
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#avg_glucose">
+        <rdf:type rdf:resource="https://www.AHDB/connected#Input"/>
+        <ont:hasCode rdf:resource="https://loinc.org/15074-8"/>
+        <required rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</required>
+        <type>xsd:double</type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#avg_glucoseMapping -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#avg_glucoseMapping">
+        <rdf:type rdf:resource="https://www.AHDB/connected#PositionInputMapping"/>
+        <ont:interfaceInput rdf:resource="http://www.co-ode.org/ontologies/ont.owl#avg_glucose"/>
+        <position rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</position>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#heart_disease -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#heart_disease">
+        <rdf:type rdf:resource="https://www.AHDB/connected#Input"/>
+        <ont:hasCode rdf:resource="https://loinc.org/LA32903-9"/>
+        <required rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</required>
+        <type>xsd:boolean</type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#heart_diseaseMapping -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#heart_diseaseMapping">
+        <rdf:type rdf:resource="https://www.AHDB/connected#PositionInputMapping"/>
+        <ont:interfaceInput rdf:resource="http://www.co-ode.org/ontologies/ont.owl#heart_disease"/>
+        <position rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</position>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#hypertension -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#hypertension">
+        <rdf:type rdf:resource="https://www.AHDB/connected#Input"/>
+        <ont:hasCode rdf:resource="http://loinc.org/45643-4"/>
+        <required rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</required>
+        <type>xsd:boolean</type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#hypertensionMapping -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#hypertensionMapping">
+        <rdf:type rdf:resource="https://www.AHDB/connected#PositionInputMapping"/>
+        <ont:interfaceInput rdf:resource="http://www.co-ode.org/ontologies/ont.owl#hypertension"/>
+        <position rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</position>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#maintainer -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#maintainer">
+        <rdf:type rdf:resource="https://www.AHDB/connected#Mantainer"/>
+        <owl:sameAs rdf:resource="http://www.co-ode.org/ontologies/ont.owl#user"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#user -->
+
+    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#user"/>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#outMapping -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#outMapping">
+        <rdf:type rdf:resource="https://www.AHDB/connected#OutputMapping"/>
+        <ont:interfaceOutput rdf:resource="http://www.co-ode.org/ontologies/ont.owl#output"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#output -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#output">
+        <rdf:type rdf:resource="https://www.AHDB/connected#Output"/>
+        <ont:hasCode rdf:resource="http://snomed.info/sct/866240007"/>
+        <type>xsd:double</type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#strokeMapping -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#strokeMapping">
+        <rdf:type rdf:resource="https://www.AHDB/connected#Mapping"/>
+        <implementation rdf:resource="http://www.co-ode.org/ontologies/ont.owl#strokeWebApi"/>
+        <inputMapping rdf:resource="http://www.co-ode.org/ontologies/ont.owl#ageMapping"/>
+        <inputMapping rdf:resource="http://www.co-ode.org/ontologies/ont.owl#avg_glucoseMapping"/>
+        <inputMapping rdf:resource="http://www.co-ode.org/ontologies/ont.owl#heart_diseaseMapping"/>
+        <inputMapping rdf:resource="http://www.co-ode.org/ontologies/ont.owl#hypertensionMapping"/>
+        <interface rdf:resource="http://www.co-ode.org/ontologies/ont.owl#strokeModelInterface"/>
+        <outputMapping rdf:resource="http://www.co-ode.org/ontologies/ont.owl#outMapping"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#strokeModel -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#strokeModel">
+        <rdf:type rdf:resource="https://www.AHDB/connected#Model"/>
+        <hasInterface rdf:resource="http://www.co-ode.org/ontologies/ont.owl#strokeModelInterface"/>
+        <hasMaintainer rdf:resource="http://www.co-ode.org/ontologies/ont.owl#maintainer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#strokeModelInterface -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#strokeModelInterface">
+        <rdf:type rdf:resource="https://www.AHDB/connected#Interface"/>
+        <expects rdf:resource="http://www.co-ode.org/ontologies/ont.owl#age"/>
+        <expects rdf:resource="http://www.co-ode.org/ontologies/ont.owl#avg_glucose"/>
+        <expects rdf:resource="http://www.co-ode.org/ontologies/ont.owl#heart_disease"/>
+        <expects rdf:resource="http://www.co-ode.org/ontologies/ont.owl#hypertension"/>
+        <returns rdf:resource="http://www.co-ode.org/ontologies/ont.owl#output"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#strokeWebApi -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#strokeWebApi">
+        <rdf:type rdf:resource="https://www.AHDB/connected#WebAPI"/>
+        <contentType>application/json</contentType>
+        <entrypoint rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://stroke-web-service:5000</entrypoint>
+        <method rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">post</method>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#user -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#user">
+        <rdf:type rdf:resource="http://www.w3.org/2000/10/swap/pim/contact#Person"/>
+        <foaf:familyName>Rossi</foaf:familyName>
+        <foaf:givenName>Mario</foaf:givenName>
+        <foaf:name>Mario Rossi</foaf:name>
+        <foaf:homepage>http://example.org/mario</foaf:homepage>
+        <foaf:mbox>mario.rossi@x-company.com</foaf:mbox>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://loinc.org/LA32903-9 -->
+
+    <owl:NamedIndividual rdf:about="https://loinc.org/LA32903-9"/>
+    
+
+
+    <!-- https://loinc.org/15074-8 -->
+
+    <owl:NamedIndividual rdf:about="https://loinc.org/15074-8"/>
     <rdf:Description>
         <rdfs:label>Christian D&apos;Errico</rdfs:label>
         <foaf:mbox>christian.derrico2@unibo.it</foaf:mbox>
