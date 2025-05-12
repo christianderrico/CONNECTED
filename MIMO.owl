@@ -165,6 +165,9 @@
 
     <owl:ObjectProperty rdf:about="https://www.AHDB/connected#describe">
         <owl:inverseOf rdf:resource="https://www.AHDB/connected#hasCode"/>
+        <dc:creator>AlmaHealthDB</dc:creator>
+        <dcterms:description>This property is the inverse of hasCode property. It associates the LOINC code, a standardized identifier used in the LOINC terminology to uniquely represent clinical datas, with input or output.</dcterms:description>
+        <rdfs:comment>inverse of hasCode</rdfs:comment>
         <rdfs:label>describe</rdfs:label>
     </owl:ObjectProperty>
     
@@ -645,26 +648,6 @@
         <rdfs:comment>an implementation of an interface as a Web API</rdfs:comment>
         <rdfs:label>WebAPI</rdfs:label>
     </owl:Class>
-    <rdf:Description>
-        <rdfs:label>Christian D&apos;Errico</rdfs:label>
-        <foaf:mbox>christian.derrico2@unibo.it</foaf:mbox>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>Christian D&apos;Errico</rdfs:label>
-        <foaf:mbox>christian.derrico2@unibo.it</foaf:mbox>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>Christian D&apos;Errico</rdfs:label>
-        <foaf:mbox>christian.derrico2@unibo.it</foaf:mbox>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>Christian D&apos;Errico</rdfs:label>
-        <foaf:mbox>christian.derrico2@unibo.it</foaf:mbox>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>Christian D&apos;Errico</rdfs:label>
-        <foaf:mbox>christian.derrico2@unibo.it</foaf:mbox>
-    </rdf:Description>
 </rdf:RDF>
 
 
