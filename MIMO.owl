@@ -3,7 +3,7 @@
      xml:base="https://www.AHDB/connected"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:mco="http://sbmi.uth.edu/ontology/mco#"
-     xmlns:ont="http://www.co-ode.org/ontologies/ont.owl#"
+     xmlns:ont="https://www.AHDB/connected#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -161,18 +161,18 @@
     
 
 
-    <!-- http://www.co-ode.org/ontologies/ont.owl#describe -->
+    <!-- https://www.AHDB/connected#describe -->
 
-    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#describe">
-        <owl:inverseOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#hasCode"/>
+    <owl:ObjectProperty rdf:about="https://www.AHDB/connected#describe">
+        <owl:inverseOf rdf:resource="https://www.AHDB/connected#hasCode"/>
         <rdfs:label>describe</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.co-ode.org/ontologies/ont.owl#hasCode -->
+    <!-- https://www.AHDB/connected#hasCode -->
 
-    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#hasCode">
+    <owl:ObjectProperty rdf:about="https://www.AHDB/connected#hasCode">
         <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1747008000</dcterms:created>
         <dcterms:creator>AlmaHealthDB</dcterms:creator>
         <dcterms:description>This property associates model input or output with its corresponding LOINC code, a standardized identifier used in the LOINC terminology to uniquely represent clinical data.</dcterms:description>
@@ -182,9 +182,9 @@
     
 
 
-    <!-- http://www.co-ode.org/ontologies/ont.owl#interfaceInput -->
+    <!-- https://www.AHDB/connected#interfaceInput -->
 
-    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#interfaceInput">
+    <owl:ObjectProperty rdf:about="https://www.AHDB/connected#interfaceInput">
         <rdfs:domain rdf:resource="https://www.AHDB/connected#InputMapping"/>
         <rdfs:range rdf:resource="https://www.AHDB/connected#Input"/>
         <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1747008000</dcterms:created>
@@ -196,9 +196,9 @@
     
 
 
-    <!-- http://www.co-ode.org/ontologies/ont.owl#interfaceOutput -->
+    <!-- https://www.AHDB/connected#interfaceOutput -->
 
-    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#interfaceOutput">
+    <owl:ObjectProperty rdf:about="https://www.AHDB/connected#interfaceOutput">
         <rdfs:domain rdf:resource="https://www.AHDB/connected#OutputMapping"/>
         <rdfs:range rdf:resource="https://www.AHDB/connected#Output"/>
         <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1747008000</dcterms:created>
@@ -692,9 +692,9 @@
     
 
 
-    <!-- http://www.co-ode.org/ontologies/ont.owl#age -->
+    <!-- https://www.AHDB/connected#age -->
 
-    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#age">
+    <owl:NamedIndividual rdf:about="https://www.AHDB/connected#age">
         <rdf:type rdf:resource="https://www.AHDB/connected#Input"/>
         <ont:hasCode rdf:resource="http://loinc.org/30525-0"/>
         <required rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</required>
@@ -703,19 +703,19 @@
     
 
 
-    <!-- http://www.co-ode.org/ontologies/ont.owl#ageMapping -->
+    <!-- https://www.AHDB/connected#ageMapping -->
 
-    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#ageMapping">
+    <owl:NamedIndividual rdf:about="https://www.AHDB/connected#ageMapping">
         <rdf:type rdf:resource="https://www.AHDB/connected#PositionInputMapping"/>
-        <ont:interfaceInput rdf:resource="http://www.co-ode.org/ontologies/ont.owl#age"/>
+        <ont:interfaceInput rdf:resource="https://www.AHDB/connected#age"/>
         <position rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</position>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.co-ode.org/ontologies/ont.owl#avg_glucose -->
+    <!-- https://www.AHDB/connected#avg_glucose -->
 
-    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#avg_glucose">
+    <owl:NamedIndividual rdf:about="https://www.AHDB/connected#avg_glucose">
         <rdf:type rdf:resource="https://www.AHDB/connected#Input"/>
         <ont:hasCode rdf:resource="https://loinc.org/15074-8"/>
         <required rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</required>
@@ -724,19 +724,19 @@
     
 
 
-    <!-- http://www.co-ode.org/ontologies/ont.owl#avg_glucoseMapping -->
+    <!-- https://www.AHDB/connected#avg_glucoseMapping -->
 
-    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#avg_glucoseMapping">
+    <owl:NamedIndividual rdf:about="https://www.AHDB/connected#avg_glucoseMapping">
         <rdf:type rdf:resource="https://www.AHDB/connected#PositionInputMapping"/>
-        <ont:interfaceInput rdf:resource="http://www.co-ode.org/ontologies/ont.owl#avg_glucose"/>
+        <ont:interfaceInput rdf:resource="https://www.AHDB/connected#avg_glucose"/>
         <position rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</position>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.co-ode.org/ontologies/ont.owl#heart_disease -->
+    <!-- https://www.AHDB/connected#heart_disease -->
 
-    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#heart_disease">
+    <owl:NamedIndividual rdf:about="https://www.AHDB/connected#heart_disease">
         <rdf:type rdf:resource="https://www.AHDB/connected#Input"/>
         <ont:hasCode rdf:resource="https://loinc.org/LA32903-9"/>
         <required rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</required>
@@ -745,19 +745,19 @@
     
 
 
-    <!-- http://www.co-ode.org/ontologies/ont.owl#heart_diseaseMapping -->
+    <!-- https://www.AHDB/connected#heart_diseaseMapping -->
 
-    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#heart_diseaseMapping">
+    <owl:NamedIndividual rdf:about="https://www.AHDB/connected#heart_diseaseMapping">
         <rdf:type rdf:resource="https://www.AHDB/connected#PositionInputMapping"/>
-        <ont:interfaceInput rdf:resource="http://www.co-ode.org/ontologies/ont.owl#heart_disease"/>
+        <ont:interfaceInput rdf:resource="https://www.AHDB/connected#heart_disease"/>
         <position rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</position>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.co-ode.org/ontologies/ont.owl#hypertension -->
+    <!-- https://www.AHDB/connected#hypertension -->
 
-    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#hypertension">
+    <owl:NamedIndividual rdf:about="https://www.AHDB/connected#hypertension">
         <rdf:type rdf:resource="https://www.AHDB/connected#Input"/>
         <ont:hasCode rdf:resource="http://loinc.org/45643-4"/>
         <required rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</required>
@@ -766,43 +766,43 @@
     
 
 
-    <!-- http://www.co-ode.org/ontologies/ont.owl#hypertensionMapping -->
+    <!-- https://www.AHDB/connected#hypertensionMapping -->
 
-    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#hypertensionMapping">
+    <owl:NamedIndividual rdf:about="https://www.AHDB/connected#hypertensionMapping">
         <rdf:type rdf:resource="https://www.AHDB/connected#PositionInputMapping"/>
-        <ont:interfaceInput rdf:resource="http://www.co-ode.org/ontologies/ont.owl#hypertension"/>
+        <ont:interfaceInput rdf:resource="https://www.AHDB/connected#hypertension"/>
         <position rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</position>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.co-ode.org/ontologies/ont.owl#maintainer -->
+    <!-- https://www.AHDB/connected#maintainer -->
 
-    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#maintainer">
+    <owl:NamedIndividual rdf:about="https://www.AHDB/connected#maintainer">
         <rdf:type rdf:resource="https://www.AHDB/connected#Mantainer"/>
-        <owl:sameAs rdf:resource="http://www.co-ode.org/ontologies/ont.owl#user"/>
+        <owl:sameAs rdf:resource="https://www.AHDB/connected#user"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.co-ode.org/ontologies/ont.owl#user -->
+    <!-- https://www.AHDB/connected#user -->
 
-    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#user"/>
+    <rdf:Description rdf:about="https://www.AHDB/connected#user"/>
     
 
 
-    <!-- http://www.co-ode.org/ontologies/ont.owl#outMapping -->
+    <!-- https://www.AHDB/connected#outMapping -->
 
-    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#outMapping">
+    <owl:NamedIndividual rdf:about="https://www.AHDB/connected#outMapping">
         <rdf:type rdf:resource="https://www.AHDB/connected#OutputMapping"/>
-        <ont:interfaceOutput rdf:resource="http://www.co-ode.org/ontologies/ont.owl#output"/>
+        <ont:interfaceOutput rdf:resource="https://www.AHDB/connected#output"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.co-ode.org/ontologies/ont.owl#output -->
+    <!-- https://www.AHDB/connected#output -->
 
-    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#output">
+    <owl:NamedIndividual rdf:about="https://www.AHDB/connected#output">
         <rdf:type rdf:resource="https://www.AHDB/connected#Output"/>
         <ont:hasCode rdf:resource="http://snomed.info/sct/866240007"/>
         <type>xsd:double</type>
@@ -810,47 +810,47 @@
     
 
 
-    <!-- http://www.co-ode.org/ontologies/ont.owl#strokeMapping -->
+    <!-- https://www.AHDB/connected#strokeMapping -->
 
-    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#strokeMapping">
+    <owl:NamedIndividual rdf:about="https://www.AHDB/connected#strokeMapping">
         <rdf:type rdf:resource="https://www.AHDB/connected#Mapping"/>
-        <implementation rdf:resource="http://www.co-ode.org/ontologies/ont.owl#strokeWebApi"/>
-        <inputMapping rdf:resource="http://www.co-ode.org/ontologies/ont.owl#ageMapping"/>
-        <inputMapping rdf:resource="http://www.co-ode.org/ontologies/ont.owl#avg_glucoseMapping"/>
-        <inputMapping rdf:resource="http://www.co-ode.org/ontologies/ont.owl#heart_diseaseMapping"/>
-        <inputMapping rdf:resource="http://www.co-ode.org/ontologies/ont.owl#hypertensionMapping"/>
-        <interface rdf:resource="http://www.co-ode.org/ontologies/ont.owl#strokeModelInterface"/>
-        <outputMapping rdf:resource="http://www.co-ode.org/ontologies/ont.owl#outMapping"/>
+        <implementation rdf:resource="https://www.AHDB/connected#strokeWebApi"/>
+        <inputMapping rdf:resource="https://www.AHDB/connected#ageMapping"/>
+        <inputMapping rdf:resource="https://www.AHDB/connected#avg_glucoseMapping"/>
+        <inputMapping rdf:resource="https://www.AHDB/connected#heart_diseaseMapping"/>
+        <inputMapping rdf:resource="https://www.AHDB/connected#hypertensionMapping"/>
+        <interface rdf:resource="https://www.AHDB/connected#strokeModelInterface"/>
+        <outputMapping rdf:resource="https://www.AHDB/connected#outMapping"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.co-ode.org/ontologies/ont.owl#strokeModel -->
+    <!-- https://www.AHDB/connected#strokeModel -->
 
-    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#strokeModel">
+    <owl:NamedIndividual rdf:about="https://www.AHDB/connected#strokeModel">
         <rdf:type rdf:resource="https://www.AHDB/connected#Model"/>
-        <hasInterface rdf:resource="http://www.co-ode.org/ontologies/ont.owl#strokeModelInterface"/>
-        <hasMaintainer rdf:resource="http://www.co-ode.org/ontologies/ont.owl#maintainer"/>
+        <hasInterface rdf:resource="https://www.AHDB/connected#strokeModelInterface"/>
+        <hasMaintainer rdf:resource="https://www.AHDB/connected#maintainer"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.co-ode.org/ontologies/ont.owl#strokeModelInterface -->
+    <!-- https://www.AHDB/connected#strokeModelInterface -->
 
-    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#strokeModelInterface">
+    <owl:NamedIndividual rdf:about="https://www.AHDB/connected#strokeModelInterface">
         <rdf:type rdf:resource="https://www.AHDB/connected#Interface"/>
-        <expects rdf:resource="http://www.co-ode.org/ontologies/ont.owl#age"/>
-        <expects rdf:resource="http://www.co-ode.org/ontologies/ont.owl#avg_glucose"/>
-        <expects rdf:resource="http://www.co-ode.org/ontologies/ont.owl#heart_disease"/>
-        <expects rdf:resource="http://www.co-ode.org/ontologies/ont.owl#hypertension"/>
-        <returns rdf:resource="http://www.co-ode.org/ontologies/ont.owl#output"/>
+        <expects rdf:resource="https://www.AHDB/connected#age"/>
+        <expects rdf:resource="https://www.AHDB/connected#avg_glucose"/>
+        <expects rdf:resource="https://www.AHDB/connected#heart_disease"/>
+        <expects rdf:resource="https://www.AHDB/connected#hypertension"/>
+        <returns rdf:resource="https://www.AHDB/connected#output"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.co-ode.org/ontologies/ont.owl#strokeWebApi -->
+    <!-- https://www.AHDB/connected#strokeWebApi -->
 
-    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#strokeWebApi">
+    <owl:NamedIndividual rdf:about="https://www.AHDB/connected#strokeWebApi">
         <rdf:type rdf:resource="https://www.AHDB/connected#WebAPI"/>
         <contentType>application/json</contentType>
         <entrypoint rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://stroke-web-service:5000</entrypoint>
@@ -859,9 +859,9 @@
     
 
 
-    <!-- http://www.co-ode.org/ontologies/ont.owl#user -->
+    <!-- https://www.AHDB/connected#user -->
 
-    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#user">
+    <owl:NamedIndividual rdf:about="https://www.AHDB/connected#user">
         <rdf:type rdf:resource="http://www.w3.org/2000/10/swap/pim/contact#Person"/>
         <foaf:familyName>Rossi</foaf:familyName>
         <foaf:givenName>Mario</foaf:givenName>
