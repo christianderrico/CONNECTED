@@ -9,12 +9,13 @@
         a                    void:Dataset ;
         dcterms:description  "This is the MIMO Ontology, a knowledge graph to model the concept of Manifest. The Manifest is a machine-readable formal description that enriches the model with a detailed explanation of its interface, adopting existing standards and ontologies, such as LOINC, SNOMED-CT, and UOM. It essentially allows us to produce a computable version of the model that can be shared, reused, and linked. The adoption of the Manifest allows for the development of algorithms to automatically index models, aggregate their capabilities, and exploit them to deal with complex tasks. By using an ontology to construct our formal representation of ML models, we standardize the nomenclature and representation of ML model reports, essentially producing a computable version of the model that can be shared, reused, and linked. Manifests are computable artifacts, able to link information about ML models, leverage semantic reasoning to link the information, and open up software tooling opportunities, aggregation of models, and querying of the information for healthcare ML research."@en ;
         dcterms:publisher    [ rdfs:label  "Christian D'Errico" ;
-                               foaf:mbox   "christian.derrico2@unibo.it" ] ;
-        dcterms:subject      "life_sciences" , "machine_learning", "ontology" ;
-        dcterms:title        "MIMO Ontology"@en ;
+                               foaf:mbox   "christian.derrico2@unibo.it"
+                             ] ;
+        dcterms:subject      "life_sciences" , "" ;
+        dcterms:title        "MIMO"@en ;
         void:dataDump        <https://christianderrico.github.io/CONNECTED/MIMO.owl> ;
         void:sparqlEndpoint  <http://localhost:3030/Dataset/sparql> ;
-        void:triples         308 ;
+        void:triples         290 ;
         foaf:homepage        <https://christianderrico.github.io/CONNECTED> ;
                 
         # Distribution information
@@ -29,4 +30,10 @@
         
         # Additional Descriptive Information
         dcterms:identifier   <http://lod-cloud.net/dataset/CONNECTED> ;
-        void:uriSpace        <http://example.org/data/> .
+        void:uriSpace        <http://example.org/data/> ;
+
+	dcterms:accrualPeriodicity <http://purl.org/cld/freq/monthly> .
+
+[ void:target   <http://lod-cloud.net/dataset/Bioportal> , <http://lod-cloud.net/dataset/CONNECTED> ;
+  void:triples  1
+] .
