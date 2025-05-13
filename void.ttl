@@ -4,6 +4,8 @@
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix void:    <http://rdfs.org/ns/void#> .
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc:      <http://purl.org/dc/elements/1.1/> .
+@prefix swp:     <http://www.w3.org/2004/03/trix/swp-2/> .
 
 <http://lod-cloud.net/dataset/CONNECTED>
         a                    void:Dataset ;
@@ -11,15 +13,14 @@
         dcterms:publisher    [ rdfs:label  "Christian D'Errico" ;
                                foaf:mbox   "christian.derrico2@unibo.it"
                              ] ;
-        dcterms:subject      "life_sciences" , "" ;
+        dcterms:subject      "life_sciences" ;
         dcterms:title        "MIMO"@en ;
         void:dataDump        <https://christianderrico.github.io/CONNECTED/MIMO.owl> ;
         void:sparqlEndpoint  <http://localhost:3030/Dataset/sparql> ;
         void:triples         290 ;
         foaf:homepage        <https://christianderrico.github.io/CONNECTED> ;
-                
+        
         # Distribution information
-        void:distribution    <https://christianderrico.github.io/CONNECTED/MIMO.owl> ;
         dcat:accessURL       <https://christianderrico.github.io/CONNECTED/MIMO.owl> ;
         
         # Additional Metadata
@@ -27,12 +28,44 @@
         dcterms:created      "2025-05-08"^^xsd:date ;
         dcterms:modified     "2025-05-08"^^xsd:date ;
         dcterms:license      <http://creativecommons.org/licenses/by/4.0/> ;
-        
-        # Additional Descriptive Information
         dcterms:identifier   <http://lod-cloud.net/dataset/CONNECTED> ;
         void:uriSpace        <http://example.org/data/> ;
+        dcterms:accrualPeriodicity <http://purl.org/cld/freq/monthly> ;
 
-	dcterms:accrualPeriodicity <http://purl.org/cld/freq/monthly> .
+        # Added Vocabulary Information
+        void:vocabulary      <http://www.w3.org/ns/dcat#> ,
+                             <http://purl.org/dc/terms/> ,
+                             <http://xmlns.com/foaf/0.1/> ,
+                             <http://rdfs.org/ns/void#> ,
+                             <http://www.w3.org/2001/XMLSchema#> ,
+                             <http://purl.org/dc/elements/1.1/> ;
+
+        # Creator Information (using dcterms:creator, aligning with dcterms:publisher)
+        dcterms:creator      [ rdfs:label  "Christian D'Errico" ;
+                               foaf:mbox   "christian.derrico2@unibo.it"
+                             ] ;
+        dc:creator           "Christian D'Errico" ;  # Added for compatibility with DC elements
+        foaf:maker           [ rdfs:label  "Christian D'Errico" ;
+                               foaf:mbox   "christian.derrico2@unibo.it"
+                             ] ;
+
+        # Contributor Information (assuming no specific contributor is provided, adding placeholder)
+        dcterms:contributor  [ rdfs:label  "Example Contributor" ;
+                               foaf:mbox   "contributor@example.org"
+                             ] ;
+
+        # Publisher Information (already included, duplicated for dc:publisher)
+        dc:publisher         "Christian D'Errico" ;
+
+        # SWP Properties (placeholders, as specific values are not provided)
+        swp:signature        <http://example.org/signature> ;  # Placeholder URI for digital signature
+        swp:authority        <http://example.org/authority> ;  # Placeholder URI for authority
+        swp:certificate      <http://example.org/certificate> ;  # Placeholder URI for certificate
+        swp:quotedBy         <http://example.org/quoting-resource> ;  # Placeholder for resource quoting this dataset
+        swp:assertedBy       <http://example.org/asserting-agent> ;  # Placeholder for agent asserting the dataset
+
+        # Frequency (already included as dcterms:accrualPeriodicity, added dcterms:Frequency for clarity)
+        dcterms:Frequency    <http://purl.org/cld/freq/monthly> .
 
 [ void:target   <http://lod-cloud.net/dataset/Bioportal> , <http://lod-cloud.net/dataset/CONNECTED> ;
   void:triples  1
