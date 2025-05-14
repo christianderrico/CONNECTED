@@ -495,6 +495,7 @@
     <!-- https://christianderrico.github.io/CONNECTED/#Implementation -->
 
     <owl:Class rdf:about="https://christianderrico.github.io/CONNECTED/#Implementation">
+        <dc:title>Implementation</dc:title>
         <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1746144000</dcterms:created>
         <dcterms:creator>AlmaHealthDB</dcterms:creator>
         <dcterms:description>A class that corresponds to operational components or services that fulfill the defined behavior of a model.</dcterms:description>
