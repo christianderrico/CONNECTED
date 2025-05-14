@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://www.AHDB/connected#"
-     xml:base="https://www.AHDB/connected"
+<rdf:RDF xmlns="https://christianderrico.github.io/CONNECTED/#"
+     xml:base="https://christianderrico.github.io/CONNECTED/"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:mco="http://sbmi.uth.edu/ontology/mco#"
-     xmlns:ont="https://www.AHDB/connected#"
+     xmlns:ont="https://christianderrico.github.io/CONNECTED/#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -15,7 +15,8 @@
      xmlns:void="http://rdfs.org/ns/void#"
      xmlns:dcterms="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
-    <owl:Ontology>
+    <owl:Ontology rdf:about="https://christianderrico.github.io/CONNECTED/">
+        <owl:versionIRI rdf:resource="https://christianderrico.github.io/CONNECTED//1.00"/>
         <dcterms:description>Dataset licensed under Creative Commons CC Zero License (cc-zero)</dcterms:description>
     </owl:Ontology>
     
@@ -163,10 +164,10 @@
     
 
 
-    <!-- https://www.AHDB/connected#describe -->
+    <!-- https://christianderrico.github.io/CONNECTED/#describe -->
 
-    <owl:ObjectProperty rdf:about="https://www.AHDB/connected#describe">
-        <owl:inverseOf rdf:resource="https://www.AHDB/connected#hasCode"/>
+    <owl:ObjectProperty rdf:about="https://christianderrico.github.io/CONNECTED/#describe">
+        <owl:inverseOf rdf:resource="https://christianderrico.github.io/CONNECTED/#hasCode"/>
         <dc:creator>AlmaHealthDB</dc:creator>
         <dcterms:description>This property is the inverse of hasCode property. It associates the LOINC code, a standardized identifier used in the LOINC terminology to uniquely represent clinical datas, with input or output.</dcterms:description>
         <rdfs:comment>inverse of hasCode</rdfs:comment>
@@ -175,13 +176,13 @@
     
 
 
-    <!-- https://www.AHDB/connected#expects -->
+    <!-- https://christianderrico.github.io/CONNECTED/#expects -->
 
-    <owl:ObjectProperty rdf:about="https://www.AHDB/connected#expects">
+    <owl:ObjectProperty rdf:about="https://christianderrico.github.io/CONNECTED/#expects">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain rdf:resource="https://www.AHDB/connected#Interface"/>
-        <rdfs:range rdf:resource="https://www.AHDB/connected#Input"/>
+        <rdfs:domain rdf:resource="https://christianderrico.github.io/CONNECTED/#Interface"/>
+        <rdfs:range rdf:resource="https://christianderrico.github.io/CONNECTED/#Input"/>
         <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1746144000</dcterms:created>
         <dcterms:creator>AlmaHealthDB</dcterms:creator>
         <dcterms:description>This property links a model interface to Inputs that must be provided when calling the interface. It defines the expected parameters required for execution.</dcterms:description>
@@ -191,11 +192,11 @@
     
 
 
-    <!-- https://www.AHDB/connected#hasCode -->
+    <!-- https://christianderrico.github.io/CONNECTED/#hasCode -->
 
-    <owl:ObjectProperty rdf:about="https://www.AHDB/connected#hasCode">
-        <rdfs:domain rdf:resource="https://www.AHDB/connected#Input"/>
-        <rdfs:domain rdf:resource="https://www.AHDB/connected#Output"/>
+    <owl:ObjectProperty rdf:about="https://christianderrico.github.io/CONNECTED/#hasCode">
+        <rdfs:domain rdf:resource="https://christianderrico.github.io/CONNECTED/#Input"/>
+        <rdfs:domain rdf:resource="https://christianderrico.github.io/CONNECTED/#Output"/>
         <rdfs:range rdf:resource="http://purl.bioontology.org/ontology/LNC/LA29742-6"/>
         <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1747008000</dcterms:created>
         <dcterms:creator>AlmaHealthDB</dcterms:creator>
@@ -206,14 +207,14 @@
     
 
 
-    <!-- https://www.AHDB/connected#hasInterface -->
+    <!-- https://christianderrico.github.io/CONNECTED/#hasInterface -->
 
-    <owl:ObjectProperty rdf:about="https://www.AHDB/connected#hasInterface">
+    <owl:ObjectProperty rdf:about="https://christianderrico.github.io/CONNECTED/#hasInterface">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain rdf:resource="https://www.AHDB/connected#Model"/>
-        <rdfs:range rdf:resource="https://www.AHDB/connected#Interface"/>
+        <rdfs:domain rdf:resource="https://christianderrico.github.io/CONNECTED/#Model"/>
+        <rdfs:range rdf:resource="https://christianderrico.github.io/CONNECTED/#Interface"/>
         <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1746144000</dcterms:created>
         <dcterms:creator>AlmaHealthDB</dcterms:creator>
         <dcterms:description>This property links a model to its specific exposing interface</dcterms:description>
@@ -223,13 +224,13 @@
     
 
 
-    <!-- https://www.AHDB/connected#hasMaintainer -->
+    <!-- https://christianderrico.github.io/CONNECTED/#hasMaintainer -->
 
-    <owl:ObjectProperty rdf:about="https://www.AHDB/connected#hasMaintainer">
+    <owl:ObjectProperty rdf:about="https://christianderrico.github.io/CONNECTED/#hasMaintainer">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain rdf:resource="https://www.AHDB/connected#Model"/>
-        <rdfs:range rdf:resource="https://www.AHDB/connected#Mantainer"/>
+        <rdfs:domain rdf:resource="https://christianderrico.github.io/CONNECTED/#Model"/>
+        <rdfs:range rdf:resource="https://christianderrico.github.io/CONNECTED/#Mantainer"/>
         <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1746144000</dcterms:created>
         <dcterms:creator>AlmaHealthDB</dcterms:creator>
         <dcterms:description>This property links a model to its maintaner</dcterms:description>
@@ -239,15 +240,15 @@
     
 
 
-    <!-- https://www.AHDB/connected#implementation -->
+    <!-- https://christianderrico.github.io/CONNECTED/#implementation -->
 
-    <owl:ObjectProperty rdf:about="https://www.AHDB/connected#implementation">
+    <owl:ObjectProperty rdf:about="https://christianderrico.github.io/CONNECTED/#implementation">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain rdf:resource="https://www.AHDB/connected#Mapping"/>
-        <rdfs:range rdf:resource="https://www.AHDB/connected#Implementation"/>
+        <rdfs:domain rdf:resource="https://christianderrico.github.io/CONNECTED/#Mapping"/>
+        <rdfs:range rdf:resource="https://christianderrico.github.io/CONNECTED/#Implementation"/>
         <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1746144000</dcterms:created>
         <dcterms:creator>AlmaHealthDB</dcterms:creator>
         <dcterms:description>This property links an implementation to a mapping, which serves as the binding point between the formal interface definition and its concrete realization.</dcterms:description>
@@ -257,13 +258,13 @@
     
 
 
-    <!-- https://www.AHDB/connected#inputMapping -->
+    <!-- https://christianderrico.github.io/CONNECTED/#inputMapping -->
 
-    <owl:ObjectProperty rdf:about="https://www.AHDB/connected#inputMapping">
+    <owl:ObjectProperty rdf:about="https://christianderrico.github.io/CONNECTED/#inputMapping">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain rdf:resource="https://www.AHDB/connected#Mapping"/>
-        <rdfs:range rdf:resource="https://www.AHDB/connected#InputMapping"/>
+        <rdfs:domain rdf:resource="https://christianderrico.github.io/CONNECTED/#Mapping"/>
+        <rdfs:range rdf:resource="https://christianderrico.github.io/CONNECTED/#InputMapping"/>
         <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1746144000</dcterms:created>
         <dcterms:creator>AlmaHealthDB</dcterms:creator>
         <dcterms:description>This property connects an abstract input to a mapping, which serves as the binding point between its formal interface definition and its concrete realization.</dcterms:description>
@@ -273,15 +274,15 @@
     
 
 
-    <!-- https://www.AHDB/connected#interface -->
+    <!-- https://christianderrico.github.io/CONNECTED/#interface -->
 
-    <owl:ObjectProperty rdf:about="https://www.AHDB/connected#interface">
+    <owl:ObjectProperty rdf:about="https://christianderrico.github.io/CONNECTED/#interface">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain rdf:resource="https://www.AHDB/connected#Mapping"/>
-        <rdfs:range rdf:resource="https://www.AHDB/connected#Interface"/>
+        <rdfs:domain rdf:resource="https://christianderrico.github.io/CONNECTED/#Mapping"/>
+        <rdfs:range rdf:resource="https://christianderrico.github.io/CONNECTED/#Interface"/>
         <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1746144000</dcterms:created>
         <dcterms:creator>AlmaHealthDB</dcterms:creator>
         <dcterms:description>This property links a model interface to a mapping, which serves as the binding point between its formal definition and its concrete realization.</dcterms:description>
@@ -291,11 +292,11 @@
     
 
 
-    <!-- https://www.AHDB/connected#interfaceInput -->
+    <!-- https://christianderrico.github.io/CONNECTED/#interfaceInput -->
 
-    <owl:ObjectProperty rdf:about="https://www.AHDB/connected#interfaceInput">
-        <rdfs:domain rdf:resource="https://www.AHDB/connected#InputMapping"/>
-        <rdfs:range rdf:resource="https://www.AHDB/connected#Input"/>
+    <owl:ObjectProperty rdf:about="https://christianderrico.github.io/CONNECTED/#interfaceInput">
+        <rdfs:domain rdf:resource="https://christianderrico.github.io/CONNECTED/#InputMapping"/>
+        <rdfs:range rdf:resource="https://christianderrico.github.io/CONNECTED/#Input"/>
         <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1747008000</dcterms:created>
         <dcterms:creator>AlmaHealthDB</dcterms:creator>
         <dcterms:description>This property associates a concrete input parameter, as defined in the implementation of an interface, with its corresponding description.</dcterms:description>
@@ -305,11 +306,11 @@
     
 
 
-    <!-- https://www.AHDB/connected#interfaceOutput -->
+    <!-- https://christianderrico.github.io/CONNECTED/#interfaceOutput -->
 
-    <owl:ObjectProperty rdf:about="https://www.AHDB/connected#interfaceOutput">
-        <rdfs:domain rdf:resource="https://www.AHDB/connected#OutputMapping"/>
-        <rdfs:range rdf:resource="https://www.AHDB/connected#Output"/>
+    <owl:ObjectProperty rdf:about="https://christianderrico.github.io/CONNECTED/#interfaceOutput">
+        <rdfs:domain rdf:resource="https://christianderrico.github.io/CONNECTED/#OutputMapping"/>
+        <rdfs:range rdf:resource="https://christianderrico.github.io/CONNECTED/#Output"/>
         <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1747008000</dcterms:created>
         <dcterms:creator>AlmaHealthDB</dcterms:creator>
         <dcterms:description>This property associates a concrete output parameter, as defined in the implementation of an interface, with its corresponding description.</dcterms:description>
@@ -319,13 +320,13 @@
     
 
 
-    <!-- https://www.AHDB/connected#outputMapping -->
+    <!-- https://christianderrico.github.io/CONNECTED/#outputMapping -->
 
-    <owl:ObjectProperty rdf:about="https://www.AHDB/connected#outputMapping">
+    <owl:ObjectProperty rdf:about="https://christianderrico.github.io/CONNECTED/#outputMapping">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain rdf:resource="https://www.AHDB/connected#Mapping"/>
-        <rdfs:range rdf:resource="https://www.AHDB/connected#OutputMapping"/>
+        <rdfs:domain rdf:resource="https://christianderrico.github.io/CONNECTED/#Mapping"/>
+        <rdfs:range rdf:resource="https://christianderrico.github.io/CONNECTED/#OutputMapping"/>
         <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1746144000</dcterms:created>
         <dcterms:creator>AlmaHealthDB</dcterms:creator>
         <dcterms:description>This property connects an abstract output to a mapping, which serves as the binding point between its formal interface definition and its concrete realization.</dcterms:description>
@@ -335,13 +336,13 @@
     
 
 
-    <!-- https://www.AHDB/connected#returns -->
+    <!-- https://christianderrico.github.io/CONNECTED/#returns -->
 
-    <owl:ObjectProperty rdf:about="https://www.AHDB/connected#returns">
+    <owl:ObjectProperty rdf:about="https://christianderrico.github.io/CONNECTED/#returns">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain rdf:resource="https://www.AHDB/connected#Interface"/>
-        <rdfs:range rdf:resource="https://www.AHDB/connected#Output"/>
+        <rdfs:domain rdf:resource="https://christianderrico.github.io/CONNECTED/#Interface"/>
+        <rdfs:range rdf:resource="https://christianderrico.github.io/CONNECTED/#Output"/>
         <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1746144000</dcterms:created>
         <dcterms:creator>AlmaHealthDB</dcterms:creator>
         <dcterms:description>This property links a model interface to Outputs that must be provided when calling the interface. It defines the expected parameters required for execution.</dcterms:description>
@@ -362,10 +363,10 @@
     
 
 
-    <!-- https://www.AHDB/connected#contentType -->
+    <!-- https://christianderrico.github.io/CONNECTED/#contentType -->
 
-    <owl:DatatypeProperty rdf:about="https://www.AHDB/connected#contentType">
-        <rdfs:domain rdf:resource="https://www.AHDB/connected#WebAPI"/>
+    <owl:DatatypeProperty rdf:about="https://christianderrico.github.io/CONNECTED/#contentType">
+        <rdfs:domain rdf:resource="https://christianderrico.github.io/CONNECTED/#WebAPI"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1746144000</dcterms:created>
         <dcterms:creator>AlmaHealthDB</dcterms:creator>
@@ -376,10 +377,10 @@
     
 
 
-    <!-- https://www.AHDB/connected#entrypoint -->
+    <!-- https://christianderrico.github.io/CONNECTED/#entrypoint -->
 
-    <owl:DatatypeProperty rdf:about="https://www.AHDB/connected#entrypoint">
-        <rdfs:domain rdf:resource="https://www.AHDB/connected#WebAPI"/>
+    <owl:DatatypeProperty rdf:about="https://christianderrico.github.io/CONNECTED/#entrypoint">
+        <rdfs:domain rdf:resource="https://christianderrico.github.io/CONNECTED/#WebAPI"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
         <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1746144000</dcterms:created>
         <dcterms:creator>AlmaHealthDB</dcterms:creator>
@@ -390,10 +391,10 @@
     
 
 
-    <!-- https://www.AHDB/connected#method -->
+    <!-- https://christianderrico.github.io/CONNECTED/#method -->
 
-    <owl:DatatypeProperty rdf:about="https://www.AHDB/connected#method">
-        <rdfs:domain rdf:resource="https://www.AHDB/connected#WebAPI"/>
+    <owl:DatatypeProperty rdf:about="https://christianderrico.github.io/CONNECTED/#method">
+        <rdfs:domain rdf:resource="https://christianderrico.github.io/CONNECTED/#WebAPI"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
         <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1746144000</dcterms:created>
         <dcterms:creator>AlmaHealthDB</dcterms:creator>
@@ -404,10 +405,10 @@
     
 
 
-    <!-- https://www.AHDB/connected#position -->
+    <!-- https://christianderrico.github.io/CONNECTED/#position -->
 
-    <owl:DatatypeProperty rdf:about="https://www.AHDB/connected#position">
-        <rdfs:domain rdf:resource="https://www.AHDB/connected#PositionInputMapping"/>
+    <owl:DatatypeProperty rdf:about="https://christianderrico.github.io/CONNECTED/#position">
+        <rdfs:domain rdf:resource="https://christianderrico.github.io/CONNECTED/#PositionInputMapping"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
         <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1746144000</dcterms:created>
         <dcterms:creator>AlmaHealthDB</dcterms:creator>
@@ -418,10 +419,10 @@
     
 
 
-    <!-- https://www.AHDB/connected#property -->
+    <!-- https://christianderrico.github.io/CONNECTED/#property -->
 
-    <owl:DatatypeProperty rdf:about="https://www.AHDB/connected#property">
-        <rdfs:domain rdf:resource="https://www.AHDB/connected#PropertyInputMapping"/>
+    <owl:DatatypeProperty rdf:about="https://christianderrico.github.io/CONNECTED/#property">
+        <rdfs:domain rdf:resource="https://christianderrico.github.io/CONNECTED/#PropertyInputMapping"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
         <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1746144000</dcterms:created>
         <dcterms:creator>AlmaHealthDB</dcterms:creator>
@@ -432,10 +433,10 @@
     
 
 
-    <!-- https://www.AHDB/connected#required -->
+    <!-- https://christianderrico.github.io/CONNECTED/#required -->
 
-    <owl:DatatypeProperty rdf:about="https://www.AHDB/connected#required">
-        <rdfs:domain rdf:resource="https://www.AHDB/connected#Input"/>
+    <owl:DatatypeProperty rdf:about="https://christianderrico.github.io/CONNECTED/#required">
+        <rdfs:domain rdf:resource="https://christianderrico.github.io/CONNECTED/#Input"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
         <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1746144000</dcterms:created>
         <dcterms:creator>AlmaHealthDB</dcterms:creator>
@@ -446,10 +447,10 @@
     
 
 
-    <!-- https://www.AHDB/connected#template -->
+    <!-- https://christianderrico.github.io/CONNECTED/#template -->
 
-    <owl:DatatypeProperty rdf:about="https://www.AHDB/connected#template">
-        <rdfs:domain rdf:resource="https://www.AHDB/connected#WebAPI"/>
+    <owl:DatatypeProperty rdf:about="https://christianderrico.github.io/CONNECTED/#template">
+        <rdfs:domain rdf:resource="https://christianderrico.github.io/CONNECTED/#WebAPI"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1746144000</dcterms:created>
         <dcterms:creator>AlmaHealthDB</dcterms:creator>
@@ -460,11 +461,11 @@
     
 
 
-    <!-- https://www.AHDB/connected#type -->
+    <!-- https://christianderrico.github.io/CONNECTED/#type -->
 
-    <owl:DatatypeProperty rdf:about="https://www.AHDB/connected#type">
-        <rdfs:domain rdf:resource="https://www.AHDB/connected#Input"/>
-        <rdfs:domain rdf:resource="https://www.AHDB/connected#Output"/>
+    <owl:DatatypeProperty rdf:about="https://christianderrico.github.io/CONNECTED/#type">
+        <rdfs:domain rdf:resource="https://christianderrico.github.io/CONNECTED/#Input"/>
+        <rdfs:domain rdf:resource="https://christianderrico.github.io/CONNECTED/#Output"/>
         <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1746144000</dcterms:created>
         <dcterms:creator>AlmaHealthDB</dcterms:creator>
         <dcterms:description>This property defines the data type (e.g., string, integer...) expected for an input or output.</dcterms:description>
@@ -491,9 +492,9 @@
     
 
 
-    <!-- https://www.AHDB/connected#Implementation -->
+    <!-- https://christianderrico.github.io/CONNECTED/#Implementation -->
 
-    <owl:Class rdf:about="https://www.AHDB/connected#Implementation">
+    <owl:Class rdf:about="https://christianderrico.github.io/CONNECTED/#Implementation">
         <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1746144000</dcterms:created>
         <dcterms:creator>AlmaHealthDB</dcterms:creator>
         <dcterms:description>A class that corresponds to operational components or services that fulfill the defined behavior of a model.</dcterms:description>
@@ -503,9 +504,9 @@
     
 
 
-    <!-- https://www.AHDB/connected#Input -->
+    <!-- https://christianderrico.github.io/CONNECTED/#Input -->
 
-    <owl:Class rdf:about="https://www.AHDB/connected#Input">
+    <owl:Class rdf:about="https://christianderrico.github.io/CONNECTED/#Input">
         <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1746144000</dcterms:created>
         <dcterms:creator>AlmaHealthDB</dcterms:creator>
         <dcterms:description>A class that describes the formal structure of an input of an interface.</dcterms:description>
@@ -515,10 +516,10 @@
     
 
 
-    <!-- https://www.AHDB/connected#InputMapping -->
+    <!-- https://christianderrico.github.io/CONNECTED/#InputMapping -->
 
-    <owl:Class rdf:about="https://www.AHDB/connected#InputMapping">
-        <owl:disjointWith rdf:resource="https://www.AHDB/connected#OutputMapping"/>
+    <owl:Class rdf:about="https://christianderrico.github.io/CONNECTED/#InputMapping">
+        <owl:disjointWith rdf:resource="https://christianderrico.github.io/CONNECTED/#OutputMapping"/>
         <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1746144000</dcterms:created>
         <dcterms:creator>AlmaHealthDB</dcterms:creator>
         <dcterms:description>A class that defines the practical implementation of an input for a specific interface, mapping actual data to the formal specification.</dcterms:description>
@@ -528,9 +529,9 @@
     
 
 
-    <!-- https://www.AHDB/connected#Interface -->
+    <!-- https://christianderrico.github.io/CONNECTED/#Interface -->
 
-    <owl:Class rdf:about="https://www.AHDB/connected#Interface">
+    <owl:Class rdf:about="https://christianderrico.github.io/CONNECTED/#Interface">
         <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1746144000</dcterms:created>
         <dcterms:creator>AlmaHealthDB</dcterms:creator>
         <dcterms:description>A class that defines a formal interface for interacting with the model</dcterms:description>
@@ -540,9 +541,9 @@
     
 
 
-    <!-- https://www.AHDB/connected#Mantainer -->
+    <!-- https://christianderrico.github.io/CONNECTED/#Mantainer -->
 
-    <owl:Class rdf:about="https://www.AHDB/connected#Mantainer">
+    <owl:Class rdf:about="https://christianderrico.github.io/CONNECTED/#Mantainer">
         <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1746144000</dcterms:created>
         <dcterms:creator>AlmaHealthDB</dcterms:creator>
         <dcterms:description>A class representing an individual or entity responsible for the maintenance, and updating of a machine learning model.</dcterms:description>
@@ -552,9 +553,9 @@
     
 
 
-    <!-- https://www.AHDB/connected#Mapping -->
+    <!-- https://christianderrico.github.io/CONNECTED/#Mapping -->
 
-    <owl:Class rdf:about="https://www.AHDB/connected#Mapping">
+    <owl:Class rdf:about="https://christianderrico.github.io/CONNECTED/#Mapping">
         <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1746144000</dcterms:created>
         <dcterms:creator>AlmaHealthDB</dcterms:creator>
         <dcterms:description>A class representing the binding between an abstract interface and a concrete implementation.</dcterms:description>
@@ -564,9 +565,9 @@
     
 
 
-    <!-- https://www.AHDB/connected#Model -->
+    <!-- https://christianderrico.github.io/CONNECTED/#Model -->
 
-    <owl:Class rdf:about="https://www.AHDB/connected#Model">
+    <owl:Class rdf:about="https://christianderrico.github.io/CONNECTED/#Model">
         <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1746144000</dcterms:created>
         <dcterms:creator>AlmaHealthDB</dcterms:creator>
         <dcterms:description>A class that rapresent a machine learning/computational/predictive model</dcterms:description>
@@ -576,9 +577,9 @@
     
 
 
-    <!-- https://www.AHDB/connected#Output -->
+    <!-- https://christianderrico.github.io/CONNECTED/#Output -->
 
-    <owl:Class rdf:about="https://www.AHDB/connected#Output">
+    <owl:Class rdf:about="https://christianderrico.github.io/CONNECTED/#Output">
         <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1746144000</dcterms:created>
         <dcterms:creator>AlmaHealthDB</dcterms:creator>
         <dcterms:description>A class that describes the formal structure of an output of an interface.</dcterms:description>
@@ -588,9 +589,9 @@
     
 
 
-    <!-- https://www.AHDB/connected#OutputMapping -->
+    <!-- https://christianderrico.github.io/CONNECTED/#OutputMapping -->
 
-    <owl:Class rdf:about="https://www.AHDB/connected#OutputMapping">
+    <owl:Class rdf:about="https://christianderrico.github.io/CONNECTED/#OutputMapping">
         <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1746144000</dcterms:created>
         <dcterms:creator>AlmaHealthDB</dcterms:creator>
         <dcterms:description>A class that defines the practical implementation of an output for a specific interface, mapping actual data to the formal specification.</dcterms:description>
@@ -600,11 +601,11 @@
     
 
 
-    <!-- https://www.AHDB/connected#PositionInputMapping -->
+    <!-- https://christianderrico.github.io/CONNECTED/#PositionInputMapping -->
 
-    <owl:Class rdf:about="https://www.AHDB/connected#PositionInputMapping">
-        <rdfs:subClassOf rdf:resource="https://www.AHDB/connected#InputMapping"/>
-        <owl:disjointWith rdf:resource="https://www.AHDB/connected#PropertyInputMapping"/>
+    <owl:Class rdf:about="https://christianderrico.github.io/CONNECTED/#PositionInputMapping">
+        <rdfs:subClassOf rdf:resource="https://christianderrico.github.io/CONNECTED/#InputMapping"/>
+        <owl:disjointWith rdf:resource="https://christianderrico.github.io/CONNECTED/#PropertyInputMapping"/>
         <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1746144000</dcterms:created>
         <dcterms:creator>AlmaHealthDB</dcterms:creator>
         <dcterms:description>A class that represents an input mapping where the input is passed to the interface of a model based on its positional index in the parameter list.</dcterms:description>
@@ -614,10 +615,10 @@
     
 
 
-    <!-- https://www.AHDB/connected#PropertyInputMapping -->
+    <!-- https://christianderrico.github.io/CONNECTED/#PropertyInputMapping -->
 
-    <owl:Class rdf:about="https://www.AHDB/connected#PropertyInputMapping">
-        <rdfs:subClassOf rdf:resource="https://www.AHDB/connected#InputMapping"/>
+    <owl:Class rdf:about="https://christianderrico.github.io/CONNECTED/#PropertyInputMapping">
+        <rdfs:subClassOf rdf:resource="https://christianderrico.github.io/CONNECTED/#InputMapping"/>
         <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1746144000</dcterms:created>
         <dcterms:creator>AlmaHealthDB</dcterms:creator>
         <dcterms:description>A class that represents an input mapping where the input is passed to the interface of a model based on its name.</dcterms:description>
@@ -627,10 +628,10 @@
     
 
 
-    <!-- https://www.AHDB/connected#WebAPI -->
+    <!-- https://christianderrico.github.io/CONNECTED/#WebAPI -->
 
-    <owl:Class rdf:about="https://www.AHDB/connected#WebAPI">
-        <rdfs:subClassOf rdf:resource="https://www.AHDB/connected#Implementation"/>
+    <owl:Class rdf:about="https://christianderrico.github.io/CONNECTED/#WebAPI">
+        <rdfs:subClassOf rdf:resource="https://christianderrico.github.io/CONNECTED/#Implementation"/>
         <dc:creator>AlmaHealthDB</dc:creator>
         <dc:description>A class that represents the implementation of a model&apos;s behavior as a Web API, exposing its operations through standardized HTTP interface</dc:description>
         <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1746144000</dcterms:created>
