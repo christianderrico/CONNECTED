@@ -18,6 +18,7 @@
     <owl:Ontology rdf:about="https://christianderrico.github.io/CONNECTED/">
         <owl:versionIRI rdf:resource="https://christianderrico.github.io/CONNECTED//1.00"/>
         <dcterms:description>Dataset licensed under Creative Commons CC Zero License (cc-zero)</dcterms:description>
+	<void:inDataset rdf:resource="http://lod-cloud.net/dataset/CONNECTED"/>
     </owl:Ontology>
     
 
