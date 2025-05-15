@@ -18,6 +18,8 @@
         void:dataDump        <https://christianderrico.github.io/CONNECTED/MIMO.owl> ;
         void:sparqlEndpoint  <http://localhost:3030/Dataset/sparql> ;
         void:triples         290 ;
+	void:entities	     93 ;
+	void:uriRegexPattern "^https://christianderrico.github.io/CONNECTED/#.*" ;
         foaf:homepage        <https://christianderrico.github.io/CONNECTED> ;
         
         # Distribution information
