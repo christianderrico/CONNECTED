@@ -33,6 +33,7 @@
         dcterms:identifier   <http://lod-cloud.net/dataset/CONNECTED> ;
         void:uriSpace        <http://example.org/data/> ;
         dcterms:accrualPeriodicity <http://purl.org/cld/freq/monthly> ;
+	dcterms:publisher "Academic" ;
 
         # Added Vocabulary Information
         void:vocabulary      <http://www.w3.org/ns/dcat#> ,

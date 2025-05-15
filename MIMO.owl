@@ -18,7 +18,7 @@
     <owl:Ontology rdf:about="https://christianderrico.github.io/CONNECTED/">
         <owl:versionIRI rdf:resource="https://christianderrico.github.io/CONNECTED//1.00"/>
         <dcterms:description>Dataset licensed under Creative Commons CC Zero License (cc-zero)</dcterms:description>
-	<void:inDataset rdf:resource="http://lod-cloud.net/dataset/CONNECTED"/>
+        <void:inDataset rdf:resource="http://lod-cloud.net/dataset/CONNECTED"/>
     </owl:Ontology>
     
 
@@ -91,6 +91,12 @@
     <!-- http://rdfs.org/ns/void#dataDump -->
 
     <owl:AnnotationProperty rdf:about="http://rdfs.org/ns/void#dataDump"/>
+    
+
+
+    <!-- http://rdfs.org/ns/void#inDataset -->
+
+    <owl:AnnotationProperty rdf:about="http://rdfs.org/ns/void#inDataset"/>
     
 
 
@@ -198,7 +204,6 @@
     <owl:ObjectProperty rdf:about="https://christianderrico.github.io/CONNECTED/#hasCode">
         <rdfs:domain rdf:resource="https://christianderrico.github.io/CONNECTED/#Input"/>
         <rdfs:domain rdf:resource="https://christianderrico.github.io/CONNECTED/#Output"/>
-        <rdfs:range rdf:resource="http://purl.bioontology.org/ontology/LNC/LA29742-6"/>
         <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1747008000</dcterms:created>
         <dcterms:creator>AlmaHealthDB</dcterms:creator>
         <dcterms:description>This property associates model input or output with its corresponding LOINC code, a standardized identifier used in the LOINC terminology to uniquely represent clinical data.</dcterms:description>
